@@ -195,7 +195,7 @@ body {
                         </tr>
                         <tr>
                           <td>&nbsp;</td>
-                          <td><input type="hidden" name="H_M_DurationTime" id="H_M_DurationTime" value="<%= session("M_DurationTime") +((cdbl(session("M_EndTime"))-cdbl(session("M_StarTime")))*100  mod 100)/100%>"></td>
+                          <td><input type="hidden" name="H_M_DurationTime" id="H_M_DurationTime" value="<%= session('M_DurationTime') +((cdbl(session('M_EndTime'))-cdbl(session('M_StarTime')))*100  mod 100)/100%>"></td>
                           <td>&nbsp;</td>
                         </tr>
                       </table></td>
