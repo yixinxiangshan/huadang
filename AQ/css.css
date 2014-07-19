@@ -1,0 +1,142 @@
+body {
+	background-color: #990000;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+.fontYellowHeight23 {
+	font-family: "宋体";
+	font-size: 12px;
+	line-height: 23px;
+	color: #FF0;
+}
+.fontBlackHeight23 {
+	font-family: "宋体";
+	font-size: 12px;
+	line-height: 23px;
+	color: #000000;
+}
+.font14BlackHeight25 {
+	font-family: "宋体";
+	font-size: 14px;
+	line-height: 25px;
+	color: #000000;
+}
+.fontBlackHeight {
+	font-family: "宋体";
+	font-size: 12px;
+	color: #000000;
+}
+.fontBlackZS {
+	font-family: "宋体";
+	font-size: 12px;
+	color: #000000;
+}
+.fontBlackRankTitle{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 32px;
+	color: #000000;
+}
+.font14RedHeight25 {
+	font-family: "宋体";
+	font-size: 14px;
+	line-height: 25px;
+	color: #990000;
+}
+.font14GreenHeight25 {
+	font-family: "宋体";
+	font-size: 14px;
+	line-height: 25px;
+	color: #265101;
+}
+.font14RedHeight {
+	font-family: "宋体";
+	font-size: 14px;
+	color: #990000;
+}
+.fontRedHeight23 {
+	font-family: "宋体";
+	font-size: 12px;
+	line-height: 23px;
+	color: #990000;
+}
+.fontGreenHeight23 {
+	font-family: "宋体";
+	font-size: 12px;
+	line-height: 23px;
+	color: #417b02;
+}
+.fontWhiteHeight23 {
+	font-family: "宋体";
+	font-size: 13px;
+	line-height: 23px;
+	color: #FFFFFF;
+}
+.fontGreenHeight23Title {
+	font-family: "宋体";
+	font-size: 13px;
+	line-height: 23px;
+	color: #196000;
+}
+a.yellowNagative { 
+    font-family: "宋体"; 
+	font-size: 12px; 
+	line-height: 23px; 
+	color: #fff000; 
+	text-decoration: none;
+}
+a.yellowNagative:hover {  
+  font-family: "宋体"; 
+  font-size: 12px; 
+  line-height: 23px; 
+  color: #fff000; 
+  text-decoration: underline;
+}
+a.blackNagative { 
+    font-family: "宋体"; 
+	font-size: 12px; 
+	line-height: 23px; 
+	color: #ff0000; 
+	text-decoration: none;
+}
+a.blackNagative:hover {  
+  font-family: "宋体"; 
+  font-size: 12px; 
+  line-height: 23px; 
+  color: #ff0000; 
+  text-decoration: underline;
+}
+a.blackNagative:hover {  
+  font-family: "宋体"; 
+  font-size: 12px; 
+  line-height: 23px; 
+  color: #ff0000; 
+  text-decoration: underline;
+}
+a.greenNagative { 
+    font-family: "宋体"; 
+	font-size: 12px; 
+	line-height: 23px; 
+	color: #1b5f00; 
+	text-decoration: none;
+}
+a.greenNagative:hover {  
+  font-family: "宋体"; 
+  font-size: 12px; 
+  line-height: 23px; 
+  color: #1b5f00; 
+  text-decoration: underline;
+}
+a.RedNagative { 
+    font-family: "宋体"; 
+	line-height: 23px; 
+	color: #ffffff; 
+	text-decoration: none;
+}
+a.RedNagative:hover {  
+  font-family: "宋体"; 
+  line-height: 23px; 
+  color: #fff000; 
+  text-decoration: underline;
+}
