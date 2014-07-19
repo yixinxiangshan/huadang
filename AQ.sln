@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "AQ", "http://localhost:8081/AQ/AQ.vbproj", "{6F1B0C13-7253-4EB2-9F1F-35EB5378547F}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{6F1B0C13-7253-4EB2-9F1F-35EB5378547F}.Debug.ActiveCfg = Debug|.NET
+		{6F1B0C13-7253-4EB2-9F1F-35EB5378547F}.Debug.Build.0 = Debug|.NET
+		{6F1B0C13-7253-4EB2-9F1F-35EB5378547F}.Release.ActiveCfg = Release|.NET
+		{6F1B0C13-7253-4EB2-9F1F-35EB5378547F}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

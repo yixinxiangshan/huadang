@@ -1,0 +1,296 @@
+<VisualStudioProject>
+    <VisualBasic
+        ProjectType = "Web"
+        ProductVersion = "7.10.3077"
+        SchemaVersion = "2.0"
+        ProjectGuid = "{6F1B0C13-7253-4EB2-9F1F-35EB5378547F}"
+    >
+        <Build>
+            <Settings
+                ApplicationIcon = ""
+                AssemblyKeyContainerName = ""
+                AssemblyName = "AQ"
+                AssemblyOriginatorKeyFile = ""
+                AssemblyOriginatorKeyMode = "None"
+                DefaultClientScript = "JScript"
+                DefaultHTMLPageLayout = "Flow"
+                DefaultTargetSchema = "IE32Nav30"
+                DelaySign = "false"
+                OutputType = "Library"
+                OptionCompare = "Binary"
+                OptionExplicit = "On"
+                OptionStrict = "Off"
+                RootNamespace = "AQ"
+                StartupObject = ""
+            >
+                <Config
+                    Name = "Debug"
+                    BaseAddress = "285212672"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = ""
+                    DefineDebug = "true"
+                    DefineTrace = "true"
+                    DebugSymbols = "true"
+                    IncrementalBuild = "true"
+                    Optimize = "false"
+                    OutputPath = "bin\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "1"
+                />
+                <Config
+                    Name = "Release"
+                    BaseAddress = "285212672"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = ""
+                    DefineDebug = "false"
+                    DefineTrace = "true"
+                    DebugSymbols = "false"
+                    IncrementalBuild = "false"
+                    Optimize = "true"
+                    OutputPath = "bin\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "1"
+                />
+            </Settings>
+            <References/>
+            <Imports>
+                <Import Namespace = "Microsoft.VisualBasic" />
+                <Import Namespace = "System" />
+            </Imports>
+        </Build>
+        <Files>
+            <Include>
+                <File
+                    RelPath = "AQ.asp"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "css.css"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "database.asp"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "fail.asp"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "failas.asp"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "index.asp"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Ranking.asp"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "RefreshOrBackError.asp"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "submit.asp"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Success.asp"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "test.asp"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Web.config"
+                    BuildAction = "Content"
+                />
+                <Folder RelPath = "bin\" />
+                <File
+                    RelPath = "DB\hhdj90Contest0604.mdb"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "DB\JNJPContest.mdb"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "DB\JNJPContest0603.mdb"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "DB\JNJPContest0611.mdb"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "DB\备份\JNJPContest0601.mdb"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "DB\备份\JNJPContest0602.mdb"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "images\answer_Top_Bk.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\back.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\Banner_bottom.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\Banner_content_bk.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\Banner_content_bk1.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\Banner_Title_Bk.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\Banner_Title_left.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\Banner_Title_Right.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\bar_left.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\bar_middle.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\bar_Right.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\DB_Content_Bk.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\DB_Content_Bk_Bottom.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\DB_Content_Bk_Middle.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\DB_Content_Bk_SM.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\DB_Content_Bk_Top.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\DB_left.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\dt_Title.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\error.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\Error_Info.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\Fail_Info.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\Line_Dot.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\right.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\StartAnswer.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\StartAnswer.png"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\submit.asp"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\Success.asp"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\success_Submit_Bottom.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\success_Submit_Content_Bk.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\success_Submit_Top.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\Title_hdsm.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\Title_jsgz.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\Top.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\top_index.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\top_index.psd"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "images\复件 StartAnswer.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "include\bottom.asp"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "include\top.asp"
+                    BuildAction = "Content"
+                />
+            </Include>
+        </Files>
+    </VisualBasic>
+</VisualStudioProject>
+
