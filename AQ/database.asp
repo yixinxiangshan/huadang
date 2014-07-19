@@ -4,7 +4,7 @@ dim aconnstring
 dim DBPath
 
 set conn=server.createobject("adodb.connection")
-DBPath = server.mappath("DB/JNJPContest.mdb")
+DBPath = server.mappath("DB/JNJPContest0611.mdb")
 conn.Open "driver={Microsoft Access Driver (*.mdb)};dbq=" & DBPath
 
 sub closeconn()    
