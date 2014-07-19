@@ -81,10 +81,6 @@
                     BuildAction = "Content"
                 />
                 <File
-                    RelPath = "failas.asp"
-                    BuildAction = "Content"
-                />
-                <File
                     RelPath = "index.asp"
                     BuildAction = "Content"
                 />
@@ -114,27 +110,7 @@
                 />
                 <Folder RelPath = "bin\" />
                 <File
-                    RelPath = "DB\hhdj90Contest0604.mdb"
-                    BuildAction = "None"
-                />
-                <File
                     RelPath = "DB\JNJPContest.mdb"
-                    BuildAction = "None"
-                />
-                <File
-                    RelPath = "DB\JNJPContest0603.mdb"
-                    BuildAction = "None"
-                />
-                <File
-                    RelPath = "DB\JNJPContest0611.mdb"
-                    BuildAction = "None"
-                />
-                <File
-                    RelPath = "DB\备份\JNJPContest0601.mdb"
-                    BuildAction = "None"
-                />
-                <File
-                    RelPath = "DB\备份\JNJPContest0602.mdb"
                     BuildAction = "None"
                 />
                 <File
@@ -235,14 +211,6 @@
                 />
                 <File
                     RelPath = "images\StartAnswer.png"
-                    BuildAction = "Content"
-                />
-                <File
-                    RelPath = "images\submit.asp"
-                    BuildAction = "Content"
-                />
-                <File
-                    RelPath = "images\Success.asp"
                     BuildAction = "Content"
                 />
                 <File
