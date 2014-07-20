@@ -69,6 +69,10 @@
                     BuildAction = "Content"
                 />
                 <File
+                    RelPath = "config.asp"
+                    BuildAction = "Content"
+                />
+                <File
                     RelPath = "css.css"
                     BuildAction = "Content"
                 />
@@ -108,7 +112,14 @@
                     RelPath = "Web.config"
                     BuildAction = "Content"
                 />
-                <Folder RelPath = "bin\" />
+                <File
+                    RelPath = "bin\AQ.dll"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "bin\AQ.pdb"
+                    BuildAction = "Content"
+                />
                 <File
                     RelPath = "DB\JNJPContest.mdb"
                     BuildAction = "None"

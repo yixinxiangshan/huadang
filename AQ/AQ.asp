@@ -1,4 +1,5 @@
 <!--#include file= database.asp-->
+<!--#include file= config.asp-->
 <%
 if (session("M_StarTime")=0) or (InStr(request.servervariables("http_referer"),"index.asp")>0) then        '开始答题
    session("M_DurationTime") = 0       '持续时间
@@ -24,7 +25,12 @@ else
 	  '如果错误大小5，则失败
 	  if session("M_ErrorNum") > 1 then
 	     response.Redirect("fail.asp")
-	  end if	
+	  end if
+	  
+	  Response.Write("<script language='javascript'>alert(timeout))</script>")
+	  if session("M_DurationTime") > timeout then
+	     response.Redirect("test.asp")
+	  end if
 	  
 	  if ((session("M_RightNum") + session("M_ErrorNum"))=3) then
 	     '答题成功
@@ -83,7 +89,7 @@ function display_time()
 	document.page_submit.durationTime.value = time_s_0;
 	
 	time_s_0++;
-	if(time_s_0 > 600) 
+	if(time_s_0 > <%=my_timeout()%>) 
 	{
    		window.location.href = 'fail.asp';
 	}
