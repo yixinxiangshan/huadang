@@ -79,6 +79,12 @@ body {
 	line-height: 23px;
 	color: #196000;
 }
+.fontWhiteHeight23Title {
+	font-family: "ËÎÌו";
+	font-size: 13px;
+	line-height: 23px;
+	color: #FFFFFF;
+}
 a.yellowNagative { 
     font-family: "ËÎÌו"; 
 	font-size: 12px; 

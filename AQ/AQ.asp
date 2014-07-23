@@ -59,13 +59,8 @@ end if
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-<title>2012年节能减排知识竞赛</title>
+<title>2014年社会主义核心价值观网上知识竞赛</title>
 <link href="css.css" rel="stylesheet" type="text/css">
-<style type="text/css">
-body {
-	background-color: #387100;
-}
-</style>
 </head>
 <script language="Javascript" type="text/javascript"> 
 
@@ -148,7 +143,7 @@ function hideElement(obj) {
           <tr>
             <td width="10%"><img src="images/dt_Title.jpg" width="82" height="26"></td>
             <td width="40%">&nbsp;</td>
-            <td width="44%" height="35" align="right" valign="middle"><strong class="font14GreenHeight25">答题时间：</strong></td>
+            <td width="44%" height="35" align="right" valign="middle"><strong class="font14RedHeight25">答题时间：</strong></td>
             <td width="6%" align="left" valign="middle"><strong><span id="mytime" class="font14RedHeight"></span>
             </strong></td>
           </tr>
@@ -160,7 +155,7 @@ function hideElement(obj) {
       <tr>
         <td align="center"><table width="95%" border="0" cellspacing="0" cellpadding="0">
           <tr>
-            <td height="40" class="font14GreenHeight25"><strong>第<%=session("M_RightNum") + session("M_ErrorNum") + 1%>题</strong></td>
+            <td height="40" class="font14RedHeight25"><strong>第<%=session("M_RightNum") + session("M_ErrorNum") + 1%>题</strong></td>
           </tr>
           <tr>
             <td height="10"></td>
@@ -241,14 +236,14 @@ function hideElement(obj) {
        <table width="200" border="0" cellpadding="0" cellspacing="0">
           <tr>
             <td width="58"><img src="images/right.gif" width="73" height="80" /></td>
-            <td width="142" class="font14GreenHeight25"><strong>恭喜你，答对啦！</strong></td>
+            <td width="142" class="font14RedHeight25"><strong>恭喜你，答对啦！</strong></td>
           </tr>
        </table>
        <div>
         </td>
       </tr>
       <tr>
-        <td height="30" align="center" class="font14RedHeight25"><span class="font14GreenHeight25">答对：<%=session("M_RightNum")%></span>  &nbsp;&nbsp;<span class="font14GreenHeight25">答错：</span><%=session("M_ErrorNum")%></td>
+        <td height="30" align="center" class="font14RedHeight25"><span class="font14RedHeight25">答对：<%=session("M_RightNum")%></span>  &nbsp;&nbsp;<span class="font14RedHeight25">答错：</span><%=session("M_ErrorNum")%></td>
       </tr>
       <tr>
         <td height="50" align="center"><a href="index.asp"><img src="images/back.jpg" width="139" height="40" border="0"></a></td>
@@ -263,7 +258,7 @@ function hideElement(obj) {
      <table width="100%" border="0" cellspacing="0" cellpadding="0">
       <tr>
         <td width="50%" valign="top" class="fontYellowHeight23">网站简介 | <a href="/hhdj/webpage/comment.asp" target="_blank" class="yellowNagative">互动交流</a> | <a href="/hhdj/bbs" class="yellowNagative">在线论坛</a> | <a href="mailto:shuji@huahong.com.cn" class="yellowNagative">书记信箱</a> | <a href="/hhdj/webpage/sitemap.htm" target="_blank" class="yellowNagative">网站地图</a> |<input name="aR" id="aR" value="<%=rightAnswer%>"><a href="/hhdj/webpage/copyright.htm" target="_blank" class="yellowNagative">版权声明</a><br>
-          2012 中共上海华虹（集团）有限公司委员会主办 版权所有 <br>
+          2014 中共上海华虹（集团）有限公司委员会主办 版权所有 <br>
           最佳浏览 1024x768 分辨率 </td>
         <td align="right" valign="top" class="fontYellowHeight23">未经授权禁止转载、摘编、复制或建立镜像<br>
           Power by Vasisoft</td>

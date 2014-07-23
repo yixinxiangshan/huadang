@@ -13,13 +13,8 @@ session("ydQuestions") = ""      '已经答过的题目
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-<title>2012年节能减排知识竞赛</title>
+<title>2014年社会主义核心价值观网上知识竞赛</title>
 <link href="css.css" rel="stylesheet" type="text/css">
-<style type="text/css">
-body {
-	background-color: #387100;
-}
-</style>
 </head>
 <body>
 <div align="center">
@@ -40,9 +35,9 @@ body {
                 <td height="50"><img src="images/Title_hdsm.jpg" width="85" height="25" /></td>
               </tr>
               <tr>
-                <td><p class="fontBlackHeight23"><strong><span class="fontGreenHeight23">活动时间</span></strong>：2012年6月4日&mdash;7日<br />
-                  <strong><span class="fontGreenHeight23">竞赛内容</span></strong>：节能减排相关知识<br />
-                  <strong><span class="fontGreenHeight23">参赛对象</span></strong>：集团总部及下属各子公司全体员工;<br />
+                <td><p class="fontBlackHeight23"><strong><span class="fontRedHeight23">活动时间</span></strong>：2012年6月4日&mdash;7日<br />
+                  <strong><span class="fontRedHeight23">竞赛内容</span></strong>：节能减排相关知识<br />
+                  <strong><span class="fontRedHeight23">参赛对象</span></strong>：集团总部及下属各子公司全体员工;<br />
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;优胜者名额分配:<br />
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;华虹NEC代表队(25)    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;华力代表队(25)<br>
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;研发中心代表队(10)    &nbsp;&nbsp;&nbsp;&nbsp;计通代表队(10)       <br />
@@ -64,7 +59,7 @@ body {
               <tr>
                 <td height="31" align="center" background="images/answer_Top_Bk.jpg"><table width="95%" border="0" cellspacing="0" cellpadding="0">
                   <tr class="fontRedHeight23">
-                    <td><span class="fontGreenHeight23">闯关成功人次统计：</span>
+                    <td><span class="fontRedHeight23">闯关成功人次统计：</span>
                       <%
 	             set rs=server.createobject("adodb.recordset")
 	             sql = "select count(*) as countNum from members"
@@ -81,7 +76,7 @@ body {
                       <span class="fontRedHeight23">(答题活动已结束)</span></td>
                   </tr>
                   <tr>
-                    <td height="30" class="fontGreenHeight23">最近答题人员记录:</td>
+                    <td height="30" class="fontWhiteHeight23">最近答题人员记录:</td>
                   </tr>
                   <tr>
                     <td align="center" bgcolor="#f2f2f2"><table width="95%" border="0" cellspacing="0" cellpadding="0">
@@ -173,8 +168,8 @@ body {
                 <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
                   <tr>
                     <td width="31"><img src="images/Banner_Title_left.jpg" width="31" height="31" /></td>
-                    <td width="200" background="images/Banner_Title_Bk.jpg" class="fontGreenHeight23Title"><strong>&nbsp;排行榜（前5名）</strong></td>
-                    <td align="right" background="images/Banner_Title_Bk.jpg" class="fontWhiteHeight23"><a href="Ranking.asp" class="greenNagative">&gt;&gt; 详细</a>&nbsp;&nbsp;</td>
+                    <td width="200" background="images/Banner_Title_Bk.jpg" class="fontWhiteHeight23Title"><strong>&nbsp;排行榜（前5名）</strong></td>
+                    <td align="right" background="images/Banner_Title_Bk.jpg" class="fontWhiteHeight23"><a href="Ranking.asp" class="RedNagative">&gt;&gt; 详细</a>&nbsp;&nbsp;</td>
                     <td width="8"><img src="images/Banner_Title_Right.jpg" width="8" height="31" /></td>
                   </tr>
                 </table></td>
@@ -190,7 +185,7 @@ body {
                         <td height="5"></td>
                       </tr>
                       <tr>
-                        <td><span class="fontGreenHeight23"><strong>华虹NEC代表队</strong></span></td>
+                        <td><span class="fontRedHeight23"><strong>华虹NEC代表队</strong></span></td>
                       </tr>
                       <tr>
                         <td class="fontBlackHeight23">
@@ -234,7 +229,7 @@ body {
                         <td height="5"></td>
                       </tr>
                       <tr>
-                        <td><span class="fontGreenHeight23"><strong>华力代表队</strong></span></td>
+                        <td><span class="fontRedHeight23"><strong>华力代表队</strong></span></td>
                       </tr>
                       <tr>
                         <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -276,7 +271,7 @@ body {
                         <td height="5"></td>
                       </tr>
                       <tr>
-                        <td><span class="fontGreenHeight23"><strong>研发中心代表队</strong></span></td>
+                        <td><span class="fontRedHeight23"><strong>研发中心代表队</strong></span></td>
                       </tr>
                       <tr>
                         <td class="fontBlackHeight23"><table width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -318,7 +313,7 @@ body {
                         <td height="5"></td>
                       </tr>
                       <tr>
-                        <td><span class="fontGreenHeight23"><strong>计通代表队</strong></span></td>
+                        <td><span class="fontRedHeight23"><strong>计通代表队</strong></span></td>
                       </tr>
                       <tr>
                         <td class="fontBlackHeight23"><table width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -360,7 +355,7 @@ body {
                         <td height="5"></td>
                       </tr>
                       <tr>
-                        <td><span class="fontGreenHeight23"><strong>虹日、进出口联队</strong></span></td>
+                        <td><span class="fontRedHeight23"><strong>虹日、进出口联队</strong></span></td>
                       </tr>
                       <tr>
                         <td class="fontBlackHeight23"><table width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -402,7 +397,7 @@ body {
                         <td height="5"></td>
                       </tr>
                       <tr>
-                        <td><span class="fontGreenHeight23"><strong>总部、华虹科技联队</strong></span></td>
+                        <td><span class="fontRedHeight23"><strong>总部、华虹科技联队</strong></span></td>
                       </tr>
                       <tr>
                         <td class="fontBlackHeight23"><table width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -457,7 +452,7 @@ body {
                 <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
                   <tr>
                     <td width="31"><img src="images/Banner_Title_left.jpg" width="31" height="31" /></td>
-                    <td background="images/Banner_Title_Bk.jpg" class="fontGreenHeight23Title"><strong>&nbsp;集团参赛情况即时统计</strong>&nbsp;</td>
+                    <td background="images/Banner_Title_Bk.jpg" class="fontWhiteHeight23Title"><strong>&nbsp;集团参赛情况即时统计</strong>&nbsp;</td>
                     <td width="8"><img src="images/Banner_Title_Right.jpg" width="8" height="31" /></td>
                   </tr>
                 </table></td>
@@ -688,7 +683,7 @@ body {
      <table width="100%" border="0" cellspacing="0" cellpadding="0">
       <tr>
         <td width="50%" valign="top" class="fontYellowHeight23">网站简介 | <a href="/hhdj/webpage/comment.asp" target="_blank" class="yellowNagative">互动交流</a> | <a href="/hhdj/bbs" class="yellowNagative">在线论坛</a> | <a href="mailto:shuji@huahong.com.cn" class="yellowNagative">书记信箱</a> | <a href="/hhdj/webpage/sitemap.htm" target="_blank" class="yellowNagative">网站地图</a> | <a href="/hhdj/webpage/copyright.htm" target="_blank" class="yellowNagative">版权声明</a><br>
-          2012 中共上海华虹（集团）有限公司委员会主办 版权所有 <br>
+          2014 中共上海华虹（集团）有限公司委员会主办 版权所有 <br>
           最佳浏览 1024x768 分辨率 </td>
         <td align="right" valign="top" class="fontYellowHeight23">未经授权禁止转载、摘编、复制或建立镜像<br>
           Power by Vasisoft</td>

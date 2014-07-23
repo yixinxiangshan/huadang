@@ -9,13 +9,8 @@ end if
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-<title>2012年节能减排知识竞赛</title>
+<title>2014年社会主义核心价值观网上知识竞赛</title>
 <link href="css.css" rel="stylesheet" type="text/css">
-<style type="text/css">
-body {
-	background-color: #387100;
-}
-</style>
 </head>
 <script language=javascript>
 	function CheckForm()
@@ -109,7 +104,7 @@ body {
           <tr>
             <td width="10%"><img src="images/dt_Title.jpg" width="82" height="26"></td>
             <td width="40%"><strong class="font14RedHeight25">恭喜您，您过关啦</strong></td>
-            <td width="44%" height="35" align="right" valign="middle"><strong class="font14GreenHeight25">答题时间：</strong></td>
+            <td width="44%" height="35" align="right" valign="middle"><strong class="font14RedHeight25">答题时间：</strong></td>
             <td width="6%" align="left" valign="middle"><strong><span id="mytime" class="font14RedHeight">
              <%= right("0" & (cint(M_DurationTime) \ 60),2) & ":" & (cint(M_DurationTime) mod 60) & ((cdbl(session("M_EndTime"))-cdbl(session("M_StarTime")))*100  mod 100)/100%>
              </span></strong></td>
@@ -230,7 +225,7 @@ body {
      <table width="100%" border="0" cellspacing="0" cellpadding="0">
       <tr>
         <td width="50%" valign="top" class="fontYellowHeight23">网站简介 | <a href="/hhdj/webpage/comment.asp" target="_blank" class="yellowNagative">互动交流</a> | <a href="/hhdj/bbs" class="yellowNagative">在线论坛</a> | <a href="mailto:shuji@huahong.com.cn" class="yellowNagative">书记信箱</a> | <a href="/hhdj/webpage/sitemap.htm" target="_blank" class="yellowNagative">网站地图</a> | <a href="/hhdj/webpage/copyright.htm" target="_blank" class="yellowNagative">版权声明</a><br>
-          2011 中共上海华虹（集团）有限公司委员会主办 版权所有 <br>
+          2014 中共上海华虹（集团）有限公司委员会主办 版权所有 <br>
           最佳浏览 1024x768 分辨率 </td>
         <td align="right" valign="top" class="fontYellowHeight23">未经授权禁止转载、摘编、复制或建立镜像<br>
           Power by Vasisoft</td>
