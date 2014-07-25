@@ -39,7 +39,7 @@ else
 	   oldM_DataTime      = rs("M_DataTime")
 	   oldM_Company       = rs("M_Company") 
 	   session("M_Name")=rs("M_Name")
-	   session("M_ID")=rs("M_ID")
+	   session("M_ID")=rs("ID")
        
 	   if (oldM_RightNum < M_RightNum) or ((oldM_RightNum = M_RightNum) and (CDbl(oldM_DurationTime) > CDbl(M_DurationTime))) then
 	   
