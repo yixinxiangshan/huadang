@@ -69,6 +69,10 @@
                     BuildAction = "Content"
                 />
                 <File
+                    RelPath = "cert.asp"
+                    BuildAction = "Content"
+                />
+                <File
                     RelPath = "config.asp"
                     BuildAction = "Content"
                 />
@@ -169,6 +173,58 @@
                     BuildAction = "Content"
                 />
                 <File
+                    RelPath = "images\cert_01.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\cert_02.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\cert_03.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\cert_04.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\cert_05.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\cert_06.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\cert_07.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\cert_08.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\cert_09.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\cert_10.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\cert_11.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\cert_12.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\cert2_03.gif"
+                    BuildAction = "Content"
+                />
+                <File
                     RelPath = "images\DB_Content_Bk.gif"
                     BuildAction = "Content"
                 />
@@ -214,6 +270,10 @@
                 />
                 <File
                     RelPath = "images\right.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\spacer.gif"
                     BuildAction = "Content"
                 />
                 <File

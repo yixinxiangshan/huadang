@@ -1,4 +1,5 @@
 <!--#include file= database.asp-->
+<!--#include file= config.asp-->
 <HTML>
 	<HEAD>
 		<title>2014年社会主义核心价值观网上知识竞赛</title>
@@ -183,7 +184,7 @@ session("ydQuestions") = ""      '已经答过的题目
 														<td><table width="100%" border="0" cellspacing="0" cellpadding="0">
 																<tr>
 																	<td width="31"><img src="images/Banner_Title_left.jpg" width="31" height="31"></td>
-																	<td width="200" background="images/Banner_Title_Bk.jpg" class="fontWhiteHeight23Title"><strong>&nbsp;排行榜（前5名）</strong></td>
+																	<td width="200" background="images/Banner_Title_Bk.jpg" class="fontWhiteHeight23Title"><strong>&nbsp;排行榜（前<%=my_ranking_number()%>名）</strong></td>
 																	<td align="right" background="images/Banner_Title_Bk.jpg" class="fontWhiteHeight23"><a href="Ranking.asp" class="RedNagative">&gt;&gt; 
 																			详细</a>&nbsp;&nbsp;</td>
 																	<td width="8"><img src="images/Banner_Title_Right.jpg" width="8" height="31"></td>
@@ -202,253 +203,36 @@ session("ydQuestions") = ""      '已经答过的题目
 																				<td height="5"></td>
 																			</tr>
 																			<tr>
-																				<td><span class="fontRedHeight23"><strong>华虹NEC代表队</strong></span></td>
-																			</tr>
-																			<tr>
 																				<td class="fontBlackHeight23">
-																					<table width="100%" border="0" cellspacing="0" cellpadding="0">
+																					<table width="100%" border="0" cellspacing="0" cellpadding="0" ID="Table1">
 																						<tr class="font14BlackHeight25">
-																							<%
-	                         set rs=server.createobject("adodb.recordset")
-	                         sql = "select top 5 * from members where M_Company = '1' order by M_RightNum DESC,M_DurationTime"
+																							<td><span class="fontGreenHeight23"><strong>排行</strong></span></td>
+																							<td><span class="fontGreenHeight23"><strong>姓名</strong></span></td>
+																							<td><span class="fontGreenHeight23"><strong>成功率</strong></span></td>
+																							<td><span class="fontGreenHeight23"><strong>用时</strong></span></td>
+																							<td><span class="fontGreenHeight23"><strong>答题日期</strong></span></td>
+																							<td><span class="fontGreenHeight23"><strong>所属单位</strong></span></td>
+																						</tr>
+																						<%
+	                         set rs = server.createobject("adodb.recordset")
+	                         sql = "select top " & my_ranking_number() & " * from members order by M_RightNum DESC,M_DurationTime"
                              rs.open sql,conn,1,1
-				             i = 1
-				             do while not rs.eof and (i<6)
+				             i = 0
+				             do while not rs.eof and (i < my_ranking_number())
 							 %>
-																							<td width="20%" class="fontBlackHeight23"><%=Deal(rs("M_Name"))&"<font color=#868686>("&cint(rs("M_RightNum")*3.334)&"%)</font>"%></td>
-																							<%
+																						<tr>
+																							<td width="10%" height="24" align="left" class="fontBlackHeight23"><%=i + 1%></td>
+																							<td width="20%" height="24" align="left" class="fontBlackHeight23"><%=Deal(rs("M_Name"))%></td>
+																							<td width="15%" height="24" align="left" class="fontBlackHeight23"><%=cint(rs("M_RightNum")*3.334)%>%</td>
+																							<td width="15%" height="24" align="left" class="fontBlackHeight23"><%=cint(rs("M_DurationTime"))%>秒</td>
+																							<td width="25%" height="24" align="left" class="fontBlackHeight23"><%=Format_Time(rs("M_DataTime"),2)%></td>
+																							<td width="25%" height="24" align="left" class="fontBlackHeight23"><%=get_company(trim(rs("M_Company")))%></td>
+																						</tr>
+																						<%
 				             rs.movenext 
                              i=i+1 
-                             loop
-							 
-							 do while (i<6)
-							 %>
-																							<td width="20%" class="fontBlackHeight23"></td>
-																							<%   
-                             i=i+1 
-                             loop							 
+                             loop					 
 						     %>
-																						</tr>
-																					</table>
-																				</td>
-																			</tr>
-																			<tr>
-																				<td height="5"></td>
-																			</tr>
-																		</table>
-																	</td>
-																</tr>
-																<tr>
-																	<td height="1" background="images/Line_Dot.gif"></td>
-																</tr>
-																<tr>
-																	<td><table width="100%" border="0" cellspacing="0" cellpadding="0">
-																			<tr>
-																				<td height="5"></td>
-																			</tr>
-																			<tr>
-																				<td><span class="fontRedHeight23"><strong>华力代表队</strong></span></td>
-																			</tr>
-																			<tr>
-																				<td><table width="100%" border="0" cellspacing="0" cellpadding="0">
-																						<tr class="font14BlackHeight25">
-																							<%
-	                         set rs=server.createobject("adodb.recordset")
-	                         sql = "select top 5 * from members where M_Company = '2' order by M_RightNum DESC,M_DurationTime"
-                             rs.open sql,conn,1,1
-				             i = 1
-				             do while not rs.eof and (i<6)
-							%>
-																							<td width="20%" class="fontBlackHeight23"><%=Deal(rs("M_Name"))&"<font color=#868686>("&cint(rs("M_RightNum")*3.334)&"%)</font>"%></td>
-																							<%
-				           rs.movenext 
-                           i=i+1 
-                           loop
-						   
-							 do while (i<6)
-							 %>
-																							<td width="20%" class="fontBlackHeight23"></td>
-																							<%   
-                             i=i+1 
-                             loop	
-						   %>
-																						</tr>
-																					</table>
-																				</td>
-																			</tr>
-																			<tr>
-																				<td height="5"></td>
-																			</tr>
-																		</table>
-																	</td>
-																</tr>
-																<tr>
-																	<td height="1" background="images/Line_Dot.gif"></td>
-																</tr>
-																<tr>
-																	<td><table width="100%" border="0" cellspacing="0" cellpadding="0">
-																			<tr>
-																				<td height="5"></td>
-																			</tr>
-																			<tr>
-																				<td><span class="fontRedHeight23"><strong>研发中心代表队</strong></span></td>
-																			</tr>
-																			<tr>
-																				<td class="fontBlackHeight23"><table width="100%" border="0" cellspacing="0" cellpadding="0">
-																						<tr class="font14BlackHeight25">
-																							<%
-	                         set rs=server.createobject("adodb.recordset")
-	                         sql = "select top 5 * from members where M_Company = '3' order by M_RightNum DESC,M_DurationTime"
-                             rs.open sql,conn,1,1
-				             i = 1
-				             do while not rs.eof and (i<6)
-							%>
-																							<td width="20%" class="fontBlackHeight23"><%=Deal(rs("M_Name"))&"<font color=#868686>("&cint(rs("M_RightNum")*3.334)&"%)</font>"%></td>
-																							<%
-				           rs.movenext 
-                           i=i+1 
-                           loop
-						   
-							 do while (i<6)
-							 %>
-																							<td width="20%" class="fontBlackHeight23"></td>
-																							<%   
-                             i=i+1 
-                             loop	
-						   %>
-																						</tr>
-																					</table>
-																				</td>
-																			</tr>
-																			<tr>
-																				<td height="5"></td>
-																			</tr>
-																		</table>
-																	</td>
-																</tr>
-																<tr>
-																	<td height="1" background="images/Line_Dot.gif"></td>
-																</tr>
-																<tr>
-																	<td><table width="100%" border="0" cellspacing="0" cellpadding="0">
-																			<tr>
-																				<td height="5"></td>
-																			</tr>
-																			<tr>
-																				<td><span class="fontRedHeight23"><strong>计通代表队</strong></span></td>
-																			</tr>
-																			<tr>
-																				<td class="fontBlackHeight23"><table width="100%" border="0" cellspacing="0" cellpadding="0">
-																						<tr class="font14BlackHeight25">
-																							<%
-	                         set rs=server.createobject("adodb.recordset")
-	                         sql = "select top 5 * from members where M_Company = '4' order by M_RightNum DESC,M_DurationTime"
-                             rs.open sql,conn,1,1
-				             i = 1
-				             do while not rs.eof and (i<6)
-							%>
-																							<td width="20%" class="fontBlackHeight23"><%=Deal(rs("M_Name"))&"<font color=#868686>("&cint(rs("M_RightNum")*3.334)&"%)</font>"%></td>
-																							<%
-				           rs.movenext 
-                           i=i+1 
-                           loop
-						   
-							 do while (i<6)
-							 %>
-																							<td width="20%" class="fontBlackHeight23"></td>
-																							<%   
-                             i=i+1 
-                             loop	
-						   %>
-																						</tr>
-																					</table>
-																				</td>
-																			</tr>
-																			<tr>
-																				<td height="5"></td>
-																			</tr>
-																		</table>
-																	</td>
-																</tr>
-																<tr>
-																	<td height="1" background="images/Line_Dot.gif"></td>
-																</tr>
-																<tr>
-																	<td><table width="100%" border="0" cellspacing="0" cellpadding="0">
-																			<tr>
-																				<td height="5"></td>
-																			</tr>
-																			<tr>
-																				<td><span class="fontRedHeight23"><strong>虹日、进出口联队</strong></span></td>
-																			</tr>
-																			<tr>
-																				<td class="fontBlackHeight23"><table width="100%" border="0" cellspacing="0" cellpadding="0">
-																						<tr class="font14BlackHeight25">
-																							<%
-	                         set rs=server.createobject("adodb.recordset")
-	                         sql = "select top 5 * from members where M_Company = '5' order by M_RightNum DESC,M_DurationTime"
-                             rs.open sql,conn,1,1
-				             i = 1
-				             do while not rs.eof and (i<6)
-							%>
-																							<td width="20%" class="fontBlackHeight23"><%=Deal(rs("M_Name"))&"<font color=#868686>("&cint(rs("M_RightNum")*3.334)&"%)</font>"%></td>
-																							<%
-				           rs.movenext 
-                           i=i+1 
-                           loop
-						   
-							 do while (i<6)
-							 %>
-																							<td width="20%" class="fontBlackHeight23"></td>
-																							<%   
-                             i=i+1 
-                             loop	 
-						   %>
-																						</tr>
-																					</table>
-																				</td>
-																			</tr>
-																			<tr>
-																				<td height="5"></td>
-																			</tr>
-																		</table>
-																	</td>
-																</tr>
-																<tr>
-																	<td height="1" background="images/Line_Dot.gif"></td>
-																</tr>
-																<tr>
-																	<td><table width="100%" border="0" cellspacing="0" cellpadding="0">
-																			<tr>
-																				<td height="5"></td>
-																			</tr>
-																			<tr>
-																				<td><span class="fontRedHeight23"><strong>总部、华虹科技联队</strong></span></td>
-																			</tr>
-																			<tr>
-																				<td class="fontBlackHeight23"><table width="100%" border="0" cellspacing="0" cellpadding="0">
-																						<tr class="font14BlackHeight25">
-																							<%
-	                         set rs=server.createobject("adodb.recordset")
-	                         sql = "select top 5 * from members where M_Company = '6' order by M_RightNum DESC,M_DurationTime"
-                             rs.open sql,conn,1,1
-				             i = 1
-				             do while not rs.eof and (i<6)
-							%>
-																							<td width="20%" class="fontBlackHeight23"><%=Deal(rs("M_Name"))&"<font color=#868686>("&cint(rs("M_RightNum")*3.334)&"%)</font>"%></td>
-																							<%
-				           rs.movenext 
-                           i=i+1 
-                           loop
-						   
-							 do while (i<6)
-							 %>
-																							<td width="20%" class="fontBlackHeight23"></td>
-																							<%   
-                             i=i+1 
-                             loop	
-						   %>
-																						</tr>
 																					</table>
 																				</td>
 																			</tr>
@@ -692,7 +476,7 @@ session("ydQuestions") = ""      '已经答过的题目
 																				<td><table width="100%" border="0" cellspacing="0" cellpadding="0">
 																						<tr>
 																							<td width="10">&nbsp;</td>
-																							<td><img src="images/DB_Content_Bk_SM.gif" width="221" height="44"></td>
+																							<td><img src="images/DB_Content_Bk_SM.gif" width="221" height="44" id="IMG1"></td>
 																						</tr>
 																					</table>
 																				</td>
