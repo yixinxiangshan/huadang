@@ -23,16 +23,11 @@ else
 	  end if
 	  
 	  '如果错误大小5，则失败
-	  if session("M_ErrorNum") > 1 then
+	  if session("M_ErrorNum") > my_failed_number() then
 	     response.Redirect("fail.asp")
 	  end if
 	  
-	  Response.Write("<script language='javascript'>alert(timeout))</script>")
-	  if session("M_DurationTime") > timeout then
-	     response.Redirect("test.asp")
-	  end if
-	  
-	  if ((session("M_RightNum") + session("M_ErrorNum"))=3) then
+	  if ((session("M_RightNum") + session("M_ErrorNum")) = my_all_number()) then
 	     '答题成功
 		 session("M_EndTime") = timer()
 		 session("M_DurationTime") = request.form("durationTime") 
@@ -43,9 +38,14 @@ else
 end if 	
 	  
 	'取随机数
-	curSelectInt = RndNumber(498,1)
+	set rs=server.createobject("adodb.recordset")
+	sql = "select count(*) as countNum from Questions"
+    rs.open sql,conn,1,1
+	tempNum = cint(rs("countNum"))
+	
+	curSelectInt = RndNumber(tempNum,1)
 	do while (InStr(session("ydQuestions"),formatInt3(curSelectInt))>0)
-	   curSelectInt = RndNumber(498,1) 
+	   curSelectInt = RndNumber(tempNum,1) 
 	loop
 	  
 	session("ydQuestions") = session("ydQuestions") & formatInt3(curSelectInt) & ":"

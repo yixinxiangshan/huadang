@@ -3,7 +3,17 @@
 '答题超时
 Function my_timeout()
 	my_timeout = 10
-End Function 
+End Function
+
+'最大能错误的题目数
+Function my_failed_number()
+	my_failed_number = 1
+End Function
+
+'所有题目数
+Function my_all_number()
+	my_all_number = 3
+End Function
 
 '主页排名个数
 Function my_ranking_number()

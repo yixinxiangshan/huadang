@@ -99,7 +99,7 @@ session("ydQuestions") = ""      '已经答过的题目
 				%>
 																			<tr>
 																				<td width="18%" height="24" align="left" class="fontBlackHeight23"><%=Deal(rs("M_Name"))%></td>
-																				<td width="15%" height="24" align="left" class="fontBlackHeight23"><%=cint(rs("M_RightNum")*3.334)%>%</td>
+																				<td width="15%" height="24" align="left" class="fontBlackHeight23"><%=cint(rs("M_RightNum")*100/my_all_number())%>%</td>
 																				<td width="15%" height="24" align="left" class="fontBlackHeight23"><%=cint(rs("M_DurationTime"))%>秒</td>
 																				<td width="25%" height="24" align="center" class="fontBlackHeight23"><%=Format_Time(rs("M_DataTime"),2)%></td>
 																				<td width="27%" height="24" align="left"><span class="fontBlackHeight23">
@@ -223,7 +223,7 @@ session("ydQuestions") = ""      '已经答过的题目
 																						<tr>
 																							<td width="10%" height="24" align="left" class="fontBlackHeight23"><%=i + 1%></td>
 																							<td width="20%" height="24" align="left" class="fontBlackHeight23"><%=Deal(rs("M_Name"))%></td>
-																							<td width="15%" height="24" align="left" class="fontBlackHeight23"><%=cint(rs("M_RightNum")*3.334)%>%</td>
+																							<td width="15%" height="24" align="left" class="fontBlackHeight23"><%=cint(rs("M_RightNum")*100/my_all_number())%>%</td>
 																							<td width="15%" height="24" align="left" class="fontBlackHeight23"><%=cint(rs("M_DurationTime"))%>秒</td>
 																							<td width="25%" height="24" align="left" class="fontBlackHeight23"><%=Format_Time(rs("M_DataTime"),2)%></td>
 																							<td width="25%" height="24" align="left" class="fontBlackHeight23"><%=get_company(trim(rs("M_Company")))%></td>

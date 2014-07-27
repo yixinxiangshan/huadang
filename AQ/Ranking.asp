@@ -1,4 +1,6 @@
 <!--#include file= database.asp-->
+<!--#include file= config.asp-->
+
 <%
 '初始化基本信息
 session("M_DurationTime") = 0    '持续时间
@@ -74,7 +76,7 @@ session("ydQuestions") = ""      '已经答过的题目
                         <td class="fontBlackHeight"><%=Deal(rs("M_Name"))%></td>
                       </tr>
                     </table></td>
-                    <td height="23" align="center"><%=cint(rs("M_RightNum")*3.334)%>%</td>
+                    <td height="23" align="center"><%=cint(rs("M_RightNum")*100/my_all_number())%>%</td>
                     <td height="23" align="center"><%=cint(rs("M_DurationTime"))%>秒</td>
                   </tr>
                   <%                      
@@ -137,7 +139,7 @@ session("ydQuestions") = ""      '已经答过的题目
                         <td class="fontBlackHeight"><%=Deal(rs("M_Name"))%></td>
                       </tr>
                       </table></td>
-                    <td height="23" align="center"><%=cint(rs("M_RightNum")*3.334)%>%</td>
+                    <td height="23" align="center"><%=cint(rs("M_RightNum")*100/my_all_number())%>%</td>
                     <td height="23" align="center"><%=cint(rs("M_DurationTime"))%>秒</td>
                     </tr>
                   <%                      
@@ -206,7 +208,7 @@ session("ydQuestions") = ""      '已经答过的题目
                         <td class="fontBlackHeight"><%=Deal(rs("M_Name"))%></td>
                       </tr>
                     </table></td>
-                    <td height="24" align="center"><%=cint(rs("M_RightNum")*3.334)%>%</td>
+                    <td height="24" align="center"><%=cint(rs("M_RightNum")*100/my_all_number())%>%</td>
                     <td height="24" align="center"><%=cint(rs("M_DurationTime"))%>秒</td>
                   </tr>
                   <%                      
@@ -272,7 +274,7 @@ session("ydQuestions") = ""      '已经答过的题目
                         <td class="fontBlackHeight"><%=Deal(rs("M_Name"))%></td>
                       </tr>
                     </table></td>
-                    <td height="24" align="center"><%=cint(rs("M_RightNum")*3.334)%>%</td>
+                    <td height="24" align="center"><%=cint(rs("M_RightNum")*100/my_all_number())%>%</td>
                     <td height="24" align="center"><%=cint(rs("M_DurationTime"))%>秒</td>
                   </tr>
                   <%                      
@@ -335,7 +337,7 @@ session("ydQuestions") = ""      '已经答过的题目
                         <td class="fontBlackHeight"><%=Deal(rs("M_Name"))%></td>
                       </tr>
                     </table></td>
-                    <td height="24" align="center"><%=cint(rs("M_RightNum")*3.334)%>%</td>
+                    <td height="24" align="center"><%=cint(rs("M_RightNum")*100/my_all_number())%>%</td>
                     <td height="24" align="center"><%=cint(rs("M_DurationTime"))%>秒</td>
                   </tr>
                   <%                      
@@ -398,7 +400,7 @@ session("ydQuestions") = ""      '已经答过的题目
                         <td class="fontBlackHeight"><%=Deal(rs("M_Name"))%></td>
                         </tr>
                       </table></td>
-                    <td height="24" align="center"><%=cint(rs("M_RightNum")*3.334)%>%</td>
+                    <td height="24" align="center"><%=cint(rs("M_RightNum")*100/my_all_number())%>%</td>
                     <td height="24" align="center"><%=cint(rs("M_DurationTime"))%>秒</td>
                     </tr>
                   <%                      
