@@ -170,7 +170,7 @@ function hideElement(obj) {
             <td height="50">
               <span class="font14BlackHeight25">
             <label>
-              <input type="radio" name="s90DT" value="1" onClick="submitFun();" />
+              <input type="checkbox" name="s90DT" value="1" />
             </label>
             <%
 			  tempInt = Cint(mid(answerList,1,1))
@@ -187,7 +187,7 @@ function hideElement(obj) {
           </tr>
           <tr>
             <td height="50"><span class="font14BlackHeight25">
-              <input type="radio" name="s90DT" value="2" onClick="submitFun();" />
+              <input type="checkbox" name="s90DT" value="2" />
             <%
 			  tempInt = Cint(mid(answerList,2,1))
 			  Select Case tempInt
@@ -203,7 +203,7 @@ function hideElement(obj) {
           </tr>
           <tr>
             <td height="50"><span class="font14BlackHeight25">
-              <input type="radio" name="s90DT" value="3" onClick="submitFun();" />
+              <input type="checkbox" name="s90DT" value="3" />
             <%
 			  tempInt = Cint(mid(answerList,3,1))
 			  Select Case tempInt
@@ -246,7 +246,8 @@ function hideElement(obj) {
         <td height="30" align="center" class="font14RedHeight25"><span class="font14RedHeight25">´ð¶Ô£º<%=session("M_RightNum")%></span>  &nbsp;&nbsp;<span class="font14RedHeight25">´ð´í£º</span><%=session("M_ErrorNum")%></td>
       </tr>
       <tr>
-        <td height="50" align="center"><a href="index.asp"><img src="images/back.jpg" width="139" height="40" border="0"></a></td>
+        <td height="50" align="center"><a href="index.asp"><img src="images/back.jpg" width="139" height="40" border="0"></a>
+        <a onClick="submitFun();"><img src="images/back.jpg" width="139" height="40" border="0"></a></td>
       </tr>
     </table></td>
   </tr>
