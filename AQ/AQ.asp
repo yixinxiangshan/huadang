@@ -176,12 +176,14 @@ function hideElement(obj) {
 			  tempInt = Cint(mid(answerList,1,1))
 			  Select Case tempInt
 			     Case 1
-				     response.write(rs("Q_A"))
+				     response.write(rs("C_1"))
 					 rightAnswer = 1
 			     Case 2
-				     response.write(rs("Q_B"))		
+				     response.write(rs("C_2"))		
 			     Case 3
-				     response.write(rs("Q_C"))				 
+				     response.write(rs("C_3"))				
+				 Case 4
+				     response.write(rs("C_4"))				  
 			  End Select 
 			%></span></td>
           </tr>
@@ -192,12 +194,14 @@ function hideElement(obj) {
 			  tempInt = Cint(mid(answerList,2,1))
 			  Select Case tempInt
 			     Case 1
-				     response.write(rs("Q_A"))
+				     response.write(rs("C_1"))
 					 rightAnswer = 2
 			     Case 2
-				     response.write(rs("Q_B"))		
+				     response.write(rs("C_2"))		
 			     Case 3
-				     response.write(rs("Q_C"))				 
+				     response.write(rs("C_3"))				 
+				 Case 4
+				     response.write(rs("C_4"))				 
 			  End Select 
 			%></span></td>
           </tr>
@@ -208,12 +212,33 @@ function hideElement(obj) {
 			  tempInt = Cint(mid(answerList,3,1))
 			  Select Case tempInt
 			     Case 1
-				     response.write(rs("Q_A"))
+				     response.write(rs("C_1"))
 					 rightAnswer = 3
 			     Case 2
-				     response.write(rs("Q_B"))		
+				     response.write(rs("C_2"))		
 			     Case 3
-				     response.write(rs("Q_C"))				 
+				     response.write(rs("C_3"))				 
+				 Case 4
+				     response.write(rs("C_4"))				 
+			  End Select 
+			%>
+            </span></td>
+          </tr>
+          <tr>
+            <td height="50"><span class="font14BlackHeight25">
+              <input type="checkbox" name="s90DT" value="3" ID="Checkbox1"/>
+            <%
+			  tempInt = Cint(mid(answerList,4,1))
+			  Select Case tempInt
+			     Case 1
+				     response.write(rs("C_1"))
+					 rightAnswer = 4
+			     Case 2
+				     response.write(rs("C_2"))		
+			     Case 3
+				     response.write(rs("C_3"))				 
+				 Case 4
+				     response.write(rs("C_4"))				 
 			  End Select 
 			%>
             </span></td>

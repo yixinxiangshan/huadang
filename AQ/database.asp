@@ -51,10 +51,14 @@ Function formatInt3(num)
 End Function
 
 Function DanSan()
-   tempStr = "123"
-   n1 = RndNumber(3,1) 
-      
-   returnStr=n1
+   tempStr = "1234"
+   
+   n1 = RndNumber(4,1)      
+   returnStr = n1
+   tempStr = mid(tempStr,1,n1-1) & mid(tempStr,n1+1,4-n1) 	 
+   
+   n1 = RndNumber(3,1)
+   returnStr = returnStr & mid(tempStr,n1,1)
    tempStr = mid(tempStr,1,n1-1) & mid(tempStr,n1+1,3-n1) 	 
    
    n1 = RndNumber(2,1) 
