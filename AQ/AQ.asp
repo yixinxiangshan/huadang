@@ -267,7 +267,7 @@ function hideElement(obj) {
           </tr>
           <tr>
             <td height="50"><span class="font14BlackHeight25">
-              <input type="<%=get_input_type(rs("Q_type"), 4)%>" name="s90DT" value="3" ID="Checkbox1"/>
+              <input type="<%=get_input_type(rs("Q_type"), 4)%>" name="s90DT" value="4" />
             <%
             if rs("Q_type") <> 2 then
 			  tempInt = Cint(mid(answerList,4,1))
