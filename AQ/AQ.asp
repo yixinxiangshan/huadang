@@ -53,21 +53,26 @@ end if
 	set rs=server.createobject("adodb.recordset")
 	sql = "select * from Questions where ID = " & curSelectInt
     rs.open sql,conn,1,1	
-    
-    rightAnswer = ""
-    if (rs("A_1")) then
+        
+	answerList = DanSan()
+	
+	rightAnswer = ""
+	answer = mid(answerList,1,1)
+    if (rs("A_" & answer)) then
 		rightAnswer = rightAnswer & ":1"
 	end if
-	if (rs("A_2")) then
+	answer = mid(answerList,2,1)
+    if (rs("A_" & answer)) then
 		rightAnswer = rightAnswer & ":2"
 	end if
-	if (rs("A_3")) then
+	answer = mid(answerList,3,1)
+    if (rs("A_" & answer)) then
 		rightAnswer = rightAnswer & ":3"
 	end if
-	if (rs("A_4")) then
+	answer = mid(answerList,4,1)
+    if (rs("A_" & answer)) then
 		rightAnswer = rightAnswer & ":4"
 	end if
-	answerList = DanSan()
 %>
 <html>
 <head>
@@ -193,7 +198,7 @@ function hideElement(obj) {
             <td height="50">
               <span class="font14BlackHeight25">
             <label>
-              <input type="checkbox" name="s90DT" value="1" />
+              <input type="<% if (rs("Q_type") = 3 Or rs("Q_type") = 5) then response.Write("checkbox") else response.Write("radio")%>" name="s90DT" value="1" />
             </label>
             <%
 			  tempInt = Cint(mid(answerList,1,1))
@@ -211,7 +216,7 @@ function hideElement(obj) {
           </tr>
           <tr>
             <td height="50"><span class="font14BlackHeight25">
-              <input type="checkbox" name="s90DT" value="2" />
+              <input type="<% if (rs("Q_type") = 3 Or rs("Q_type") = 5) then response.Write("checkbox") else response.Write("radio")%>" name="s90DT" value="2" />
             <%
 			  tempInt = Cint(mid(answerList,2,1))
 			  Select Case tempInt
@@ -228,7 +233,7 @@ function hideElement(obj) {
           </tr>
           <tr>
             <td height="50"><span class="font14BlackHeight25">
-              <input type="checkbox" name="s90DT" value="3" />
+              <input type="<% if (rs("Q_type") = 3 Or rs("Q_type") = 5) then response.Write("checkbox") else response.Write("radio")%>" name="s90DT" value="3" />
             <%
 			  tempInt = Cint(mid(answerList,3,1))
 			  Select Case tempInt
@@ -246,7 +251,7 @@ function hideElement(obj) {
           </tr>
           <tr>
             <td height="50"><span class="font14BlackHeight25">
-              <input type="checkbox" name="s90DT" value="3" ID="Checkbox1"/>
+              <input type="<% if (rs("Q_type") = 3 Or rs("Q_type") = 5) then response.Write("checkbox") else response.Write("radio")%>" name="s90DT" value="3" ID="Checkbox1"/>
             <%
 			  tempInt = Cint(mid(answerList,4,1))
 			  Select Case tempInt
