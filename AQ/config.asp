@@ -7,12 +7,22 @@ End Function
 
 '最大能错误的题目数
 Function my_failed_score()
-	my_failed_score = 8
+	my_failed_score = 10
 End Function
 
 '所有题目数
 Function my_all_number()
 	my_all_number = 6
+End Function
+
+'所有补充单选题目数
+Function my_single_number()
+	my_single_number = 2
+End Function
+
+'所有补充复选题目数
+Function my_multi_number()
+	my_multi_number = 1
 End Function
 
 '主页排名个数

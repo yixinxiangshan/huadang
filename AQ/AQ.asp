@@ -5,11 +5,13 @@ if (session("M_StarTime")=0) or (InStr(request.servervariables("http_referer"),"
    session("M_DurationTime") = 0       '持续时间
    session("M_RightNum") = 0           '答对的题目数
    session("M_ErrorNum") = 0           '答错的题目数
-   session("M_ErrorScore") = 0           '答错的题目分数
+   session("M_ErrorScore") = 0         '答错的题目分数
    session("M_StarTime") = timer()     '开始时间
    session("M_EndTime") = 0            '结束时间
    session("lastRequestTimer") = 0     '最后读取的时间
    session("ydQuestions") = ""         '已经答过的题目
+   session("ydSingleNumber") = 0       '已经答过的补充单选题目数
+   session("ydMultiNumber") = 0        '已经答过的补充复选题目数
 else
    if cdbl(request.form("requestTimer"))<=cdbl(session("lastRequestTimer")) then
       response.Redirect("RefreshOrBackError.asp")
@@ -46,10 +48,21 @@ end if
 	tempNum = cint(rs("countNum"))
 	
 	curSelectInt = RndNumber(tempNum,1)
-	do while (InStr(session("ydQuestions"),formatInt3(curSelectInt))>0)
+	signal = true
+	do while (signal)
+	   signal = false
 	   curSelectInt = RndNumber(tempNum,1) 
+	   if InStr(session("ydQuestions"), formatInt3(curSelectInt)) > 0 then
+		  signal = true
+	   else
+	      set rs=server.createobject("adodb.recordset")
+		  sql = "select * from Questions where ID = " & curSelectInt
+		  rs.open sql,conn,1,1
+		  if rs("Q_type") = 4 And session("ydSingleNumber") = my_single_number() then signal = true end if
+		  if rs("Q_type") = 5 And session("ydMultiNumber") = my_multi_number() then signal = true end if
+	   end if
 	loop
-	  
+	
 	session("ydQuestions") = session("ydQuestions") & formatInt3(curSelectInt) & ":"
 	
 	set rs=server.createobject("adodb.recordset")
@@ -81,6 +94,14 @@ end if
 		questionScore = 4
 	else
 		questionScore = 3
+	end if
+	
+	'add question number
+	if rs("Q_type") = 4 then
+		session("ydSingleNumber") = session("ydSingleNumber") + 1
+	end if
+	if rs("Q_type") = 5 then
+		session("ydMultiNumber") = session("ydMultiNumber") + 1
 	end if
 %>
 <html>
@@ -355,7 +376,7 @@ function hideElement(obj) {
      <input type="hidden" name="durationTime" id="durationTime" value="0">
      <input type="hidden" name="requestTimer" id="requestTimer" value="<%=timer()%>">
      <input type="hidden" name="isCorrect" id="isCorrect" value="">
-     <input name="questionScore" id="questionScore" value="<%=questionScore%>">
+     <input type="hidden" name="questionScore" id="questionScore" value="<%=questionScore%>">
     </td>
   </tr>
 </table>
