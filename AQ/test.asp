@@ -7,15 +7,10 @@
 </head>
 
 <body>
-<%
-   test1 = CDbl("33.5")
-   test2 = CDbl("124")
-   
-   if test1 > test2 then
-      response.write("big")
-   else
-   	  response.write("small")
-   end if	  
-%>
+<script language="Javascript" type="text/javascript"> 
+var str = " to the universe.";
+var n = str.indexOf("welcome");
+alert(n);
+</script>
 </body>
 </html>

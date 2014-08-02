@@ -16,7 +16,7 @@ else
       session("lastRequestTimer") = request.form("requestTimer") 
 	  
 	  'ÊÇ·ñÕýÈ·
-	  if request.form("aR") = request.form("s90DT") then
+	  if request.form("isCorrect") then
 	     session("M_RightNum") = session("M_RightNum") + 1
       else
 	     session("M_ErrorNum") = session("M_ErrorNum") + 1
@@ -53,7 +53,20 @@ end if
 	set rs=server.createobject("adodb.recordset")
 	sql = "select * from Questions where ID = " & curSelectInt
     rs.open sql,conn,1,1	
-	
+    
+    rightAnswer = ""
+    if (rs("A_1")) then
+		rightAnswer = rightAnswer & ":1"
+	end if
+	if (rs("A_2")) then
+		rightAnswer = rightAnswer & ":2"
+	end if
+	if (rs("A_3")) then
+		rightAnswer = rightAnswer & ":3"
+	end if
+	if (rs("A_4")) then
+		rightAnswer = rightAnswer & ":4"
+	end if
 	answerList = DanSan()
 %>
 <html>
@@ -94,13 +107,23 @@ function display_time()
 
 function submitFun()
 {
-   selectNum = 0;	
-   for(i=0;i <document.page_submit.s90DT.length;i++)  
-       if(document.page_submit.s90DT[i].checked)  
-          selectNum = i;    
+   isCorrect = true;
+   for(i=0;i <document.page_submit.s90DT.length;i++)  {
+      if(document.page_submit.s90DT[i].checked) {          
+         if (document.page_submit.aR.value.indexOf(String(i + 1)) == -1) {
+	        isCorrect = false;
+	        break;
+         }
+      }
+      else {
+         if (document.page_submit.aR.value.indexOf(String(i + 1)) != -1) {
+	        isCorrect = false;
+	        break;
+         }
+      }
+   }
       
-   selectNum = selectNum+1;	
-	if (String(selectNum)==document.page_submit.aR.value){
+	if (isCorrect){
 		hideElement('divAnswerError');
 		showElement('divAnswerRight');
 		}
@@ -108,7 +131,7 @@ function submitFun()
 		showElement('divAnswerError');
 		hideElement('divAnswerRight');
 		}	
-		
+	document.page_submit.isCorrect.value = isCorrect;
 	setTimeout('onSubmitForm()', 500);	
 }
 
@@ -177,7 +200,6 @@ function hideElement(obj) {
 			  Select Case tempInt
 			     Case 1
 				     response.write(rs("C_1"))
-					 rightAnswer = 1
 			     Case 2
 				     response.write(rs("C_2"))		
 			     Case 3
@@ -195,7 +217,6 @@ function hideElement(obj) {
 			  Select Case tempInt
 			     Case 1
 				     response.write(rs("C_1"))
-					 rightAnswer = 2
 			     Case 2
 				     response.write(rs("C_2"))		
 			     Case 3
@@ -213,7 +234,6 @@ function hideElement(obj) {
 			  Select Case tempInt
 			     Case 1
 				     response.write(rs("C_1"))
-					 rightAnswer = 3
 			     Case 2
 				     response.write(rs("C_2"))		
 			     Case 3
@@ -232,7 +252,6 @@ function hideElement(obj) {
 			  Select Case tempInt
 			     Case 1
 				     response.write(rs("C_1"))
-					 rightAnswer = 4
 			     Case 2
 				     response.write(rs("C_2"))		
 			     Case 3
@@ -292,6 +311,7 @@ function hideElement(obj) {
      </table>     
      <input type="hidden" name="durationTime" id="durationTime" value="0">
      <input type="hidden" name="requestTimer" id="requestTimer" value="<%=timer()%>">
+     <input type="hidden" name="isCorrect" id="isCorrect" value="">
     </td>
   </tr>
 </table>
