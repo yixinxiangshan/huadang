@@ -198,61 +198,78 @@ function hideElement(obj) {
             <td height="50">
               <span class="font14BlackHeight25">
             <label>
-              <input type="<% if (rs("Q_type") = 3 Or rs("Q_type") = 5) then response.Write("checkbox") else response.Write("radio")%>" name="s90DT" value="1" />
+              <input type="<%=get_input_type(rs("Q_type"), 1)%>" name="s90DT" value="1" />
             </label>
             <%
-			  tempInt = Cint(mid(answerList,1,1))
-			  Select Case tempInt
-			     Case 1
-				     response.write(rs("C_1"))
-			     Case 2
-				     response.write(rs("C_2"))		
-			     Case 3
-				     response.write(rs("C_3"))				
-				 Case 4
-				     response.write(rs("C_4"))				  
-			  End Select 
+              if rs("Q_type") = 2 then
+				response.write("¶Ô")
+				if rs("A_1") then
+				  rightAnswer = ":1"
+				end if
+			  else
+				tempInt = Cint(mid(answerList,1,1))
+				Select Case tempInt
+					Case 1
+						response.write(rs("C_1"))
+					Case 2
+						response.write(rs("C_2"))		
+					Case 3
+						response.write(rs("C_3"))				
+					Case 4
+						response.write(rs("C_4"))				  
+				End Select
+			  end if 
 			%></span></td>
           </tr>
           <tr>
             <td height="50"><span class="font14BlackHeight25">
-              <input type="<% if (rs("Q_type") = 3 Or rs("Q_type") = 5) then response.Write("checkbox") else response.Write("radio")%>" name="s90DT" value="2" />
+              <input type="<%=get_input_type(rs("Q_type"), 2)%>" name="s90DT" value="2" />
             <%
-			  tempInt = Cint(mid(answerList,2,1))
-			  Select Case tempInt
-			     Case 1
-				     response.write(rs("C_1"))
-			     Case 2
-				     response.write(rs("C_2"))		
-			     Case 3
-				     response.write(rs("C_3"))				 
-				 Case 4
-				     response.write(rs("C_4"))				 
-			  End Select 
+              if rs("Q_type") = 2 then
+				response.write("´í")
+				if rs("A_2") then
+				  rightAnswer = ":2"
+				end if
+			  else
+				tempInt = Cint(mid(answerList,2,1))
+				Select Case tempInt
+					Case 1
+						response.write(rs("C_1"))
+					Case 2
+						response.write(rs("C_2"))		
+					Case 3
+						response.write(rs("C_3"))				 
+					Case 4
+						response.write(rs("C_4"))				 
+				End Select 
+			  end if
 			%></span></td>
           </tr>
           <tr>
             <td height="50"><span class="font14BlackHeight25">
-              <input type="<% if (rs("Q_type") = 3 Or rs("Q_type") = 5) then response.Write("checkbox") else response.Write("radio")%>" name="s90DT" value="3" />
+              <input type="<%=get_input_type(rs("Q_type"), 3)%>" name="s90DT" value="3" />
             <%
-			  tempInt = Cint(mid(answerList,3,1))
-			  Select Case tempInt
-			     Case 1
-				     response.write(rs("C_1"))
-			     Case 2
-				     response.write(rs("C_2"))		
-			     Case 3
-				     response.write(rs("C_3"))				 
-				 Case 4
-				     response.write(rs("C_4"))				 
-			  End Select 
+            if rs("Q_type") <> 2 then
+				tempInt = Cint(mid(answerList,3,1))
+				Select Case tempInt
+					Case 1
+						response.write(rs("C_1"))
+					Case 2
+						response.write(rs("C_2"))		
+					Case 3
+						response.write(rs("C_3"))				 
+					Case 4
+						response.write(rs("C_4"))				 
+				End Select 
+			end if
 			%>
             </span></td>
           </tr>
           <tr>
             <td height="50"><span class="font14BlackHeight25">
-              <input type="<% if (rs("Q_type") = 3 Or rs("Q_type") = 5) then response.Write("checkbox") else response.Write("radio")%>" name="s90DT" value="3" ID="Checkbox1"/>
+              <input type="<%=get_input_type(rs("Q_type"), 4)%>" name="s90DT" value="3" ID="Checkbox1"/>
             <%
+            if rs("Q_type") <> 2 then
 			  tempInt = Cint(mid(answerList,4,1))
 			  Select Case tempInt
 			     Case 1
@@ -264,6 +281,7 @@ function hideElement(obj) {
 				 Case 4
 				     response.write(rs("C_4"))				 
 			  End Select 
+			end if
 			%>
             </span></td>
           </tr>
