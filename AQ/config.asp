@@ -6,8 +6,8 @@ Function my_timeout()
 End Function
 
 '最大能错误的题目数
-Function my_failed_number()
-	my_failed_number = 1
+Function my_failed_score()
+	my_failed_score = 8
 End Function
 
 '所有题目数

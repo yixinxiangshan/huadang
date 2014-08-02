@@ -5,6 +5,7 @@ if (session("M_StarTime")=0) or (InStr(request.servervariables("http_referer"),"
    session("M_DurationTime") = 0       '持续时间
    session("M_RightNum") = 0           '答对的题目数
    session("M_ErrorNum") = 0           '答错的题目数
+   session("M_ErrorScore") = 0           '答错的题目分数
    session("M_StarTime") = timer()     '开始时间
    session("M_EndTime") = 0            '结束时间
    session("lastRequestTimer") = 0     '最后读取的时间
@@ -20,10 +21,11 @@ else
 	     session("M_RightNum") = session("M_RightNum") + 1
       else
 	     session("M_ErrorNum") = session("M_ErrorNum") + 1
+	     session("M_ErrorScore") = session("M_ErrorScore") + request.form("questionScore")
 	  end if
 	  
-	  '如果错误大小5，则失败
-	  if session("M_ErrorNum") > my_failed_number() then
+	  '如果错误分数大小41，则失败	  
+	  if session("M_ErrorScore") > my_failed_score() then
 	     response.Redirect("fail.asp")
 	  end if
 	  
@@ -72,6 +74,13 @@ end if
 	answer = mid(answerList,4,1)
     if (rs("A_" & answer)) then
 		rightAnswer = rightAnswer & ":4"
+	end if
+	
+	'add question score
+	if rs("Q_type") = 3 Or rs("Q_type") = 5 then
+		questionScore = 4
+	else
+		questionScore = 3
 	end if
 %>
 <html>
@@ -346,6 +355,7 @@ function hideElement(obj) {
      <input type="hidden" name="durationTime" id="durationTime" value="0">
      <input type="hidden" name="requestTimer" id="requestTimer" value="<%=timer()%>">
      <input type="hidden" name="isCorrect" id="isCorrect" value="">
+     <input name="questionScore" id="questionScore" value="<%=questionScore%>">
     </td>
   </tr>
 </table>
