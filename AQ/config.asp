@@ -12,7 +12,7 @@ End Function
 
 '所有题目数
 Function my_all_number()
-	my_all_number = 5
+	my_all_number = 6
 End Function
 
 '主页排名个数

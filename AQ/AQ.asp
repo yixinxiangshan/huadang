@@ -285,6 +285,17 @@ function hideElement(obj) {
 			%>
             </span></td>
           </tr>
+          <tr>
+            <td height="50"><span class="font14BlackHeight25">
+              <input type="<%if rs("C_5") <> "" then response.Write(get_input_type(rs("Q_type"), 5)) else response.Write("hidden") end if%>" name="s90DT" value="5" />
+            <%
+            if rs("C_5") <> "" then
+				     response.write(rs("C_5"))
+				     if rs("A_5") then rightAnswer = rightAnswer & ":5"	end if
+			end if
+			%>
+            </span></td>
+          </tr>
         </table></td>
       </tr>
       <tr>
