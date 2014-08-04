@@ -411,7 +411,7 @@ end if
 									&nbsp;&nbsp;´ð´í£º<%=session("M_ErrorNum")%></td>
 							</tr>
 							<tr>
-								<td height="50" align="center"><a href="index.asp"><img src="images/back.jpg" width="139" height="40" border="0"></a>&nbsp;<a href="cert.asp">´òÓ¡Ö¤Êé</a></td>
+								<td height="50" align="center"><a href="index.asp"><img src="images/back.jpg" width="139" height="40" border="0"></a>&nbsp;<a href="cert.asp"><img src="images/printCert.jpg" width="139" height="40" border="0"></a></td>
 							</tr>
 						</table>
 						<p>&nbsp;</p>

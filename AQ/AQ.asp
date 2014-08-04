@@ -355,7 +355,7 @@ function hideElement(obj) {
       </tr>
       <tr>
         <td height="50" align="center"><a href="index.asp"><img src="images/back.jpg" width="139" height="40" border="0"></a>
-        <a onClick="submitFun();"><img src="images/back.jpg" width="139" height="40" border="0"></a></td>
+        <a onClick="submitFun();"><img src="images/next.jpg" width="139" height="40" border="0"></a></td>
       </tr>
     </table></td>
   </tr>
