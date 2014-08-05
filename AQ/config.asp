@@ -12,7 +12,17 @@ End Function
 
 '所有题目数
 Function my_all_number()
-	my_all_number = 6
+	my_all_number = my_normal_single_number() + my_normal_multi_number() + my_single_number() + my_multi_number()
+End Function
+
+'所有补充单选题目数
+Function my_normal_single_number()
+	my_normal_single_number = 2
+End Function
+
+'所有补充复选题目数
+Function my_normal_multi_number()
+	my_normal_multi_number = 1
 End Function
 
 '所有补充单选题目数

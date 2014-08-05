@@ -10,6 +10,8 @@ if (session("M_StarTime")=0) or (InStr(request.servervariables("http_referer"),"
    session("M_EndTime") = 0            '结束时间
    session("lastRequestTimer") = 0     '最后读取的时间
    session("ydQuestions") = ""         '已经答过的题目
+   session("ydNormalSingleNumber") = 0 '已经答过的普通单选题目数
+   session("ydNormalMultiNumber") = 0  '已经答过的普通复选题目数
    session("ydSingleNumber") = 0       '已经答过的补充单选题目数
    session("ydMultiNumber") = 0        '已经答过的补充复选题目数
 else
@@ -58,6 +60,8 @@ end if
 	      set rs=server.createobject("adodb.recordset")
 		  sql = "select * from Questions where ID = " & curSelectInt
 		  rs.open sql,conn,1,1
+		  if (rs("Q_type") = 1 Or rs("Q_type") = 2) And session("ydNormalSingleNumber") = my_normal_single_number() then signal = true end if
+		  if rs("Q_type") = 3 And session("ydNormalMultiNumber") = my_normal_multi_number() then signal = true end if
 		  if rs("Q_type") = 4 And session("ydSingleNumber") = my_single_number() then signal = true end if
 		  if rs("Q_type") = 5 And session("ydMultiNumber") = my_multi_number() then signal = true end if
 	   end if
@@ -97,6 +101,12 @@ end if
 	end if
 	
 	'add question number
+	if rs("Q_type") = 1 Or rs("Q_type") = 2 then
+		session("ydNormalSingleNumber") = session("ydNormalSingleNumber") + 1
+	end if
+	if rs("Q_type") = 3 then
+		session("ydNormalMultiNumber") = session("ydNormalMultiNumber") + 1
+	end if
 	if rs("Q_type") = 4 then
 		session("ydSingleNumber") = session("ydSingleNumber") + 1
 	end if
