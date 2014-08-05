@@ -113,6 +113,7 @@ end if
 	<script language="Javascript" type="text/javascript"> 
 
 var time_s_0 = <%if request.form("durationTime")="" then response.write("0") else response.write(request.form("durationTime")) end if%>;
+var this_time = 0;
  
 function number_length(N, L)
 {
@@ -132,12 +133,20 @@ function display_time()
 	document.page_submit.durationTime.value = time_s_0;
 	
 	time_s_0++;
-	if(time_s_0 > <%=my_timeout()%>) 
+	
+	this_ns = number_length((this_time % 60), 2);
+	this_nm = number_length(Math.floor(this_time/60), 2);
+	
+	document.all.thistime.innerHTML = this_nm + ':' +  this_ns;
+	
+	this_time++;
+	if(this_time > <%=my_timeout()%>) 
 	{
    		window.location.href = 'fail.asp';
 	}
-	else 
+	else {
 	    setTimeout("display_time()", 1000);	
+	}
 }
 
 function submitFun()
@@ -200,10 +209,11 @@ function hideElement(obj) {
 									<td><table width="100%" border="0" cellspacing="0" cellpadding="0">
 											<tr>
 												<td width="10%"><img src="images/dt_Title.jpg" width="82" height="26"></td>
-												<td width="40%">&nbsp;</td>
-												<td width="44%" height="35" align="right" valign="middle"><strong class="font14RedHeight25">答题时间：</strong></td>
-												<td width="6%" align="left" valign="middle"><strong><span id="mytime" class="font14RedHeight"></span>
-													</strong>
+												<td width="50%">&nbsp;</td>
+												<td width="14%" height="35" align="right" valign="middle"><strong class="font14RedHeight25">总答题时间：</strong></td>
+												<td width="6%" align="left" valign="middle"><strong><span id="mytime" class="font14RedHeight"></span></strong>
+												<td width="14%" height="35" align="right" valign="middle"><strong class="font14RedHeight25">本题时间：</strong></td>
+												<td width="6%" align="left" valign="middle"><strong><span id="thistime" class="font14RedHeight"></span></strong>
 												</td>
 											</tr>
 										</table>
