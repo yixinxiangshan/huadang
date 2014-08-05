@@ -156,8 +156,7 @@ session("ydQuestions") = ""      '已经答过的题目
 														<td align="center" valign="middle" class="fontBlackHeight23"><table width="100%" border="0" cellspacing="0" cellpadding="0">
 																<tr>
 																	<td class="fontBlackHeight23">1) 参加网上答题者首先登录集团党建网（网址：www.huahong.com.cn/hhdj/），<br>
-																		&nbsp;&nbsp; 进入上海华虹（集团）有限公司2014年社会主义核心价值观竞赛（网上答题）
-																		&nbsp;&nbsp; 活动界面。<br>
+																		&nbsp;&nbsp; 进入上海华虹（集团）有限公司2014年社会主义核心价值观竞赛（网上答题） &nbsp;&nbsp; 活动界面。<br>
 																		2) 网上答题每30题为一组，由电脑自动抽取，每组答题时间为10分钟,参赛者须<br>
 																		&nbsp;&nbsp; 答对18题才算合格。<br>
 																		3) 答题结果以公司为单位排序，按分数优先列出网上答题优胜者名单，分数相同<br>
@@ -187,8 +186,7 @@ session("ydQuestions") = ""      '已经答过的题目
 																<tr>
 																	<td width="31"><img src="images/Banner_Title_left.jpg" width="31" height="31"></td>
 																	<td width="200" background="images/Banner_Title_Bk.jpg" class="fontWhiteHeight23Title"><strong>&nbsp;排行榜（前<%=my_ranking_number()%>名）</strong></td>
-																	<td align="right" background="images/Banner_Title_Bk.jpg" class="fontWhiteHeight23"><a href="Ranking.asp" class="RedNagative">&gt;&gt; 
-																			详细</a>&nbsp;&nbsp;</td>
+																	<td align="right" background="images/Banner_Title_Bk.jpg" class="fontWhiteHeight23"></td>
 																	<td width="8"><img src="images/Banner_Title_Right.jpg" width="8" height="31"></td>
 																</tr>
 															</table>
@@ -208,12 +206,11 @@ session("ydQuestions") = ""      '已经答过的题目
 																				<td class="fontBlackHeight23">
 																					<table width="100%" border="0" cellspacing="0" cellpadding="0" ID="Table1">
 																						<tr class="font14BlackHeight25">
-																							<td><span class="fontBlackHeight23"><strong>排行</strong></span></td>
-																							<td><span class="fontBlackHeight23"><strong>姓名</strong></span></td>
-																							<td><span class="fontBlackHeight23"><strong>成功率</strong></span></td>
-																							<td><span class="fontBlackHeight23"><strong>用时</strong></span></td>
-																							<td><span class="fontBlackHeight23"><strong>答题日期</strong></span></td>
-																							<td><span class="fontBlackHeight23"><strong>所属单位</strong></span></td>
+																							<td align="center"><span class="fontBlackHeight23"><strong>排行</strong></span></td>
+																							<td align="center"><span class="fontBlackHeight23"><strong>姓名</strong></span></td>
+																							<td align="center"><span class="fontBlackHeight23"><strong>成功率</strong></span></td>
+																							<td align="center"><span class="fontBlackHeight23"><strong>用时</strong></span></td>
+																							<td align="center"><span class="fontBlackHeight23"><strong>所属单位</strong></span></td>
 																						</tr>
 																						<%
 	                         set rs = server.createobject("adodb.recordset")
@@ -223,12 +220,11 @@ session("ydQuestions") = ""      '已经答过的题目
 				             do while not rs.eof and (i < my_ranking_number())
 							 %>
 																						<tr>
-																							<td width="10%" height="24" align="left" class="fontBlackHeight23"><%=i + 1%></td>
-																							<td width="20%" height="24" align="left" class="fontBlackHeight23"><%=Deal(rs("M_Name"))%></td>
-																							<td width="15%" height="24" align="left" class="fontBlackHeight23"><%=cint(rs("M_RightNum")*100/my_all_number())%>%</td>
-																							<td width="15%" height="24" align="left" class="fontBlackHeight23"><%=cint(rs("M_DurationTime"))%>秒</td>
-																							<td width="25%" height="24" align="left" class="fontBlackHeight23"><%=Format_Time(rs("M_DataTime"),2)%></td>
-																							<td width="25%" height="24" align="left" class="fontBlackHeight23"><%=get_company(trim(rs("M_Company")))%></td>
+																							<td width="20%" height="24" align="center" class="fontBlackHeight23"><%=i + 1%></td>
+																							<td width="20%" height="24" align="center" class="fontBlackHeight23"><%=Deal(rs("M_Name"))%></td>
+																							<td width="20%" height="24" align="center" class="fontBlackHeight23"><%=cint(rs("M_RightNum")*100/my_all_number())%>%</td>
+																							<td width="20%" height="24" align="center" class="fontBlackHeight23"><%=cint(rs("M_DurationTime"))%>秒</td>
+																							<td width="20%" height="24" align="center" class="fontBlackHeight23"><%=get_company(trim(rs("M_Company")))%></td>
 																						</tr>
 																						<%
 				             rs.movenext 
