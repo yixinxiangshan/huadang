@@ -35,7 +35,7 @@ session("ydQuestions") = ""      '已经答过的题目
 														<td height="50"><img src="images/Title_hdsm.jpg" width="85" height="25"></td>
 													</tr>
 													<tr>
-														<td><p class="fontBlackHeight23"><strong><span class="fontRedHeight23">活动时间</span></strong>：2012年6月4日—7日<br>
+														<td><p class="fontBlackHeight23"><strong><span class="fontRedHeight23">活动时间</span></strong>：2014年9月1日—25日<br>
 																<strong>
 																	<span class="fontRedHeight23">竞赛内容</span></strong>：社会主义核心价值观<br>
 																<strong>
@@ -156,14 +156,16 @@ session("ydQuestions") = ""      '已经答过的题目
 														<td align="center" valign="middle" class="fontBlackHeight23"><table width="100%" border="0" cellspacing="0" cellpadding="0">
 																<tr>
 																	<td class="fontBlackHeight23">1) 参加网上答题者首先登录集团党建网（网址：www.huahong.com.cn/hhdj/），<br>
-																		&nbsp;&nbsp; 进入上海华虹（集团）有限公司2012年节能减排知识竞赛（网上答题）活动界<br>
-																		&nbsp;&nbsp; 面。<br>
+																		&nbsp;&nbsp; 进入上海华虹（集团）有限公司2014年社会主义核心价值观竞赛（网上答题）
+																		&nbsp;&nbsp; 活动界面。<br>
 																		2) 网上答题每30题为一组，由电脑自动抽取，每组答题时间为10分钟,参赛者须<br>
 																		&nbsp;&nbsp; 答对18题才算合格。<br>
 																		3) 答题结果以公司为单位排序，按分数优先列出网上答题优胜者名单，分数相同<br>
 																		&nbsp;&nbsp; 时以时间优先。<br>
 																		4) 答题结束后需实名提交，并填写工作单位。为区别同名同姓者，请答题者务必<br>
-																		&nbsp;&nbsp; 填写联系方式（手机号）。</td>
+																		&nbsp;&nbsp; 填写联系方式（手机号）。<br>
+																		5) 活动结束后， 将在优秀证书获得者中，随机抽取50名幸运参赛者，给予纪念<br>
+																		&nbsp;&nbsp; 品1份。</td>
 																</tr>
 															</table>
 														</td>
@@ -206,12 +208,12 @@ session("ydQuestions") = ""      '已经答过的题目
 																				<td class="fontBlackHeight23">
 																					<table width="100%" border="0" cellspacing="0" cellpadding="0" ID="Table1">
 																						<tr class="font14BlackHeight25">
-																							<td><span class="fontGreenHeight23"><strong>排行</strong></span></td>
-																							<td><span class="fontGreenHeight23"><strong>姓名</strong></span></td>
-																							<td><span class="fontGreenHeight23"><strong>成功率</strong></span></td>
-																							<td><span class="fontGreenHeight23"><strong>用时</strong></span></td>
-																							<td><span class="fontGreenHeight23"><strong>答题日期</strong></span></td>
-																							<td><span class="fontGreenHeight23"><strong>所属单位</strong></span></td>
+																							<td><span class="fontBlackHeight23"><strong>排行</strong></span></td>
+																							<td><span class="fontBlackHeight23"><strong>姓名</strong></span></td>
+																							<td><span class="fontBlackHeight23"><strong>成功率</strong></span></td>
+																							<td><span class="fontBlackHeight23"><strong>用时</strong></span></td>
+																							<td><span class="fontBlackHeight23"><strong>答题日期</strong></span></td>
+																							<td><span class="fontBlackHeight23"><strong>所属单位</strong></span></td>
 																						</tr>
 																						<%
 	                         set rs = server.createobject("adodb.recordset")
