@@ -1,4 +1,13 @@
 <%
+'答题开始时间
+Function my_start_date()
+	my_start_date = "2014-08-01"
+End Function
+
+'答题结束时间
+Function my_stop_date()
+	my_stop_date = "2014-09-01"
+End Function
 
 '答题超时
 Function my_timeout()
