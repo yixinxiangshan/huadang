@@ -462,12 +462,3 @@ session("ydQuestions") = ""      '已经答过的题目
 </body>
 </html>
 <%closeconn%>
-<%
-Function Deal(exp1)
-     dim exp2
-     exp2=Replace(exp1," ","")
-	 exp2=Replace(exp1,"&nbsp;","")
-     exp2=Replace(exp2,"　","")
-     Deal=exp2
-End Function 
-%>

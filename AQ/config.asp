@@ -84,4 +84,12 @@ Function get_input_type(q_type, input_number)
 			get_input_type = "checkbox"
 	end select
 End Function
+
+Function Deal(exp1)
+     dim exp2
+     exp2=Replace(exp1," ","")
+	 exp2=Replace(exp1,"&nbsp;","")
+     exp2=Replace(exp2,"¡¡","")
+     Deal=exp2
+End Function 
 %>
