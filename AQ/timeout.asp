@@ -35,7 +35,7 @@
 </div>
 
 <map name="Map1">
-  <area shape="rect" coords="270,80,336,99" href="index.asp" target="_self">
+  <area shape="rect" coords="270,92,336,107" href="index.asp" target="_self">
 </map>
 
 </body>

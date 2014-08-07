@@ -117,6 +117,10 @@
                     BuildAction = "Content"
                 />
                 <File
+                    RelPath = "timeout.asp"
+                    BuildAction = "Content"
+                />
+                <File
                     RelPath = "Web.config"
                     BuildAction = "Content"
                 />
@@ -310,6 +314,14 @@
                 />
                 <File
                     RelPath = "images\success_Submit_Top.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\Thumbs.db"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "images\Timeout_Info.jpg"
                     BuildAction = "Content"
                 />
                 <File
