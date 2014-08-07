@@ -1,2 +1,6 @@
 AQ/bin
 Thumbs.db
+
+*.sln
+*.suo
+*.AQ.vbproj.webinfo

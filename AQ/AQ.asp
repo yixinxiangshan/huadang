@@ -152,7 +152,7 @@ function display_time()
 	this_time++;
 	if(this_time > <%=my_timeout()%>) 
 	{
-   		window.location.href = 'fail.asp';
+   		window.location.href = 'timeout.asp';
 	}
 	else {
 	    setTimeout("display_time()", 1000);	
