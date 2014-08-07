@@ -14,7 +14,7 @@
                  rs.open sql,conn,1,1
 				 i = 1
 				 do while not rs.eof
-					name = "'" & Deal(rs("M_Name")) & ":(" & Deal(rs("M_MP")) & ")',"
+					name = "'" & Deal(rs("M_Name")) & "(" & Deal(rs("M_MP")) & ")',"
 					response.write(name)
 					rs.movenext
                  loop
@@ -29,6 +29,39 @@
 	window.arr = []; //排除号码或姓名序号 例子 [0,1,2,3,4]
 	window.v_s = 50;   //滚动响应时间，单位毫秒，数字越大滚动越慢
 	window.h_s = 1000;  //本参数window.obo=1有效，控制结果卡片显示时间，显示期间键盘按钮被锁定
+	
+	var finished_time = 1;
+	function confirm(){
+		if (finished_time == window.ini.length){
+			var lucky_names = "";			
+			var obj = document.getElementsByTagName("span");//先得到所有的SPAN标记
+			for(var i=0;i<obj.length;i++)
+			{
+				if(obj[i].className == 'oMain')//找出span标记中class=a的那个标记
+				{
+					var getObj = obj[i];
+					value = getObj.innerHTML;//获得他的innerHTML
+					lucky_names += value + "；";
+				}
+			}
+			var form = document.createElement("form");
+			form.setAttribute("method", "post");
+			form.setAttribute("action", "lucky.asp");
+
+			var hiddenField = document.createElement("input");
+			hiddenField.setAttribute("type", "hidden");
+			hiddenField.setAttribute("name", "lucky_names");
+			hiddenField.setAttribute("value", lucky_names);
+			form.appendChild(hiddenField);
+
+			document.body.appendChild(form);
+			form.submit();
+			
+		}
+		else{
+			finished_time++;
+		}
+	};
 			</script>
 	</head>
 	<body>
@@ -47,16 +80,13 @@
 						<div class="Top"><div id="Go"><fieldset class="MainBG"><div id="Main"><h2 class="title"><input class="QD" onclick="group();" type="button" value="启动抽奖系统"/></h2>
 										<div class="input"></div>
 									</div>
-									<div id="input"><input id="start" name="start" type="button" value="开始(空格)" /><input id="end" name="end" type="button" value="停止(空格)" /><input id="login" name="login" type="button" value="下一组(回车)" /></div>
+									<div id="input"><input id="start" name="start" type="button" value="开始(空格)" /><input id="end" name="end" type="button" value="停止(空格)" /><input id="login" name="login" type="button" value="下一组(回车)" onclick="confirm();" /></div>
 								</fieldset></div>
 							<div id="out"><fieldset><legend> 中奖结果 </legend>
 									<ul id="tableOUT">
 										<li style="display:none" />
 									</ul>
 								</fieldset></div>
-						</div>
-						<div class="End" align="center"><ul>
-							</ul>
 						</div>
 					</td>
 				</tr>
@@ -83,9 +113,10 @@
 					</td>
 				</tr>
 			</table>
-		</div>
+		</div>		
 		<map name="Map1">
 			<area shape="rect" coords="270,124,336,139" href="index.asp" target="_self">
 		</map>
 	</body>
 </html>
+<%closeconn%>

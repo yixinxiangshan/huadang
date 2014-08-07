@@ -97,6 +97,10 @@
                     BuildAction = "Content"
                 />
                 <File
+                    RelPath = "lucky.asp"
+                    BuildAction = "Content"
+                />
+                <File
                     RelPath = "Ranking.asp"
                     BuildAction = "Content"
                 />
