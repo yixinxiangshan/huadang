@@ -202,7 +202,7 @@ session("ydQuestions") = ""      '已经答过的题目
 																<tr>
 																	<td width="31"><img src="images/Banner_Title_left.jpg" width="31" height="31"></td>
 																	<td width="200" background="images/Banner_Title_Bk.jpg" class="fontWhiteHeight23Title"><strong>&nbsp;排行榜（前<%=my_ranking_number()%>名）</strong></td>
-																	<td align="right" background="images/Banner_Title_Bk.jpg" class="fontWhiteHeight23"></td>
+																	<td align="right" background="images/Banner_Title_Bk.jpg" class="fontWhiteHeight23">&nbsp;</td>
 																	<td width="8"><img src="images/Banner_Title_Right.jpg" width="8" height="31"></td>
 																</tr>
 															</table>
