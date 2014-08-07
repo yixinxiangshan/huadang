@@ -113,7 +113,7 @@
 					</td>
 				</tr>
 			</table>
-		</div>		
+		</div>
 		<map name="Map1">
 			<area shape="rect" coords="270,124,336,139" href="index.asp" target="_self">
 		</map>
