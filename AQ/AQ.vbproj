@@ -77,6 +77,14 @@
                     BuildAction = "Content"
                 />
                 <File
+                    RelPath = "choujiang.css"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "choujiang.js"
+                    BuildAction = "Content"
+                />
+                <File
                     RelPath = "config.asp"
                     BuildAction = "Content"
                 />
@@ -274,10 +282,6 @@
                 />
                 <File
                     RelPath = "images\Fail_Info.jpg"
-                    BuildAction = "Content"
-                />
-                <File
-                    RelPath = "images\js.js"
                     BuildAction = "Content"
                 />
                 <File

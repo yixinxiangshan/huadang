@@ -5,7 +5,8 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
 		<title>2014年社会主义核心价值观网上知识竞赛</title>
 		<link href="css.css" rel="stylesheet" type="text/css">
-			<script type="text/javascript" src="images/js.js"></script>
+		<link href="choujiang.css" rel="stylesheet" type="text/css">
+			<script type="text/javascript" src="choujiang.js"></script>
 			<script type="text/javascript">
 	var m_name = [
 				<%
@@ -22,7 +23,7 @@
 	];
 
 	window.ini =[
-		{name:"幸运奖", num:1, clas:"ipt5"}
+		{name:"", num:50, clas:"ipt1"}
 	];
 	window.rep = 0; //是否允许号码重复出现
 	window.obo = 0; //一次抽一（组0/个1）
