@@ -28,7 +28,7 @@
 	window.rep = 0; //是否允许号码重复出现
 	window.obo = 0; //一次抽一（组0/个1）
 	window.arr = []; //排除号码或姓名序号 例子 [0,1,2,3,4]
-	window.v_s = 50;   //滚动响应时间，单位毫秒，数字越大滚动越慢
+	window.v_s = 20;   //滚动响应时间，单位毫秒，数字越大滚动越慢
 	window.h_s = 1000;  //本参数window.obo=1有效，控制结果卡片显示时间，显示期间键盘按钮被锁定
 	
 	var finished_time = 1;
@@ -118,6 +118,6 @@
 		<map name="Map1">
 			<area shape="rect" coords="270,124,336,139" href="index.asp" target="_self">
 		</map>
+	<%closeconn%>
 	</body>
 </html>
-<%closeconn%>
