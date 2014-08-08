@@ -51,19 +51,9 @@ session("ydQuestions") = ""      '已经答过的题目
 														<td height="50"><img src="images/Title_hdsm.jpg" width="85" height="25"></td>
 													</tr>
 													<tr>
-														<td><p class="fontBlackHeight23"><strong><span class="fontRedHeight23">活动时间</span></strong>：2014年9月1日—25日<br>
-																<strong>
-																	<span class="fontRedHeight23">竞赛内容</span></strong>：社会主义核心价值观<br>
-																<strong>
-																	<span class="fontRedHeight23">参赛对象</span></strong>：集团总部及下属各子公司全体员工;<br>
-																&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;优胜者名额分配:<br>
-																&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;华虹NEC代表队(25) 
-																&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;华力代表队(25)<br>
-																&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;研发中心代表队(10) 
-																&nbsp;&nbsp;&nbsp;&nbsp;计通代表队(10)
-																<br>
-																&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;虹日、进出口联队(10) 
-																&nbsp;&nbsp;总部、华虹科技联队(10)
+														<td><p class="fontBlackHeight23">
+															<strong><span class="fontRedHeight23">活动时间</span></strong>：2014年9月1日—25日<br>
+															<strong><span class="fontRedHeight23">竞赛目的</span></strong>：为进一步推进华虹集团系统各级领导干部，全体党员和广大员工学习践行社会主义核心价值观<br>
 															</p>
 														</td>
 													</tr>
@@ -171,15 +161,12 @@ session("ydQuestions") = ""      '已经答过的题目
 													<tr>
 														<td align="center" valign="middle" class="fontBlackHeight23"><table width="100%" border="0" cellspacing="0" cellpadding="0">
 																<tr>
-																	<td class="fontBlackHeight23">1) 参加网上答题者首先登录集团党建网（网址：www.huahong.com.cn/hhdj/），<br>
-																		&nbsp;&nbsp; 进入上海华虹（集团）有限公司2014年社会主义核心价值观竞赛（网上答题） &nbsp;&nbsp; 活动界面。<br>
-																		2) 网上答题每30题为一组，由电脑自动抽取，每组答题时间为10分钟,参赛者须<br>
-																		&nbsp;&nbsp; 答对18题才算合格。<br>
-																		3) 答题结果以公司为单位排序，按分数优先列出网上答题优胜者名单，分数相同<br>
-																		&nbsp;&nbsp; 时以时间优先。<br>
-																		4) 答题结束后需实名提交，并填写工作单位。为区别同名同姓者，请答题者务必<br>
+																	<td class="fontBlackHeight23">
+																		1) 网上答题每30题为一组，由电脑自动抽取，每组答题时间为15分钟,参赛者须<br>
+																		&nbsp;&nbsp; 达满60分以上获得合格证书。<br>
+																		2) 答题结束后需实名提交，并填写工作单位。为区别同名同姓者，请答题者务必<br>
 																		&nbsp;&nbsp; 填写联系方式（手机号）。<br>
-																		5) 活动结束后， 将在优秀证书获得者中，随机抽取50名幸运参赛者，给予纪念<br>
+																		3) 活动结束后， 将在优秀证书获得者中，随机抽取50名幸运参赛者，给予纪念<br>
 																		&nbsp;&nbsp; 品1份。</td>
 																</tr>
 															</table>
