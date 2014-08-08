@@ -374,8 +374,8 @@ function hideElement(obj) {
 									</td>
 								</tr>
 								<tr>
-									<td height="30" align="center" class="font14RedHeight25"><span class="font14RedHeight25">答对：<%=session("M_RightNum")%></span>
-										&nbsp;&nbsp;<span class="font14RedHeight25">答错：</span><%=session("M_ErrorNum")%></td>
+									<td height="30" align="center" class="font14RedHeight25"><span class="font14RedHeight25">答对：<%=session("M_RightNum")%>题</span>
+										&nbsp;&nbsp;<span class="font14RedHeight25">答错：</span><%=session("M_ErrorNum")%>题&nbsp;&nbsp;<span class="font14RedHeight25">已扣分数：</span><%=session("M_ErrorScore")%>分</td>
 								</tr>
 								<tr>
 									<td height="50" align="center"><a href="index.asp"><img src="images/back.jpg" width="139" height="40" border="0"></a>
