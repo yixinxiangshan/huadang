@@ -73,7 +73,7 @@ session("ydQuestions") = ""      '已经答过的题目
 													<tr>
 														<td align="center"><table width="95%" border="0" cellspacing="0" cellpadding="0">
 																<tr>
-																	<td height="75" align="center"><div id="start_div" name="start_div"></div></td>
+																	<td height="75" align="center"><div id="start_div" name="start_div"></div><div><a href="lucky.asp"><img src="images/StartAnswer.jpg" width="162" height="42" border="0"></a></div></td>
 																</tr>
 																<tr>
 																	<td height="30" class="fontWhiteHeight23">最近答题人员记录:</td>

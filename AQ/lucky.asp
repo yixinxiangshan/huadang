@@ -5,15 +5,17 @@
 		<title>2014年社会主义核心价值观网上知识竞赛</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
 		<link href="css.css" rel="stylesheet" type="text/css">
-			<%
+			<%			
 				Set rs = Server.CreateObject("adodb.recordset")
 				sql="select * from lucky_names"
 				rs.open sql,conn,1,3
 				if rs.eof then
 					rs.addnew
 				end if
-				rs("lucky_names") = Deal(request.form("lucky_names"))
-				rs.update
+				if InStr(request.servervariables("http_referer"), "choujiang.asp") > 0 then
+					rs("lucky_names") = Deal(request.form("lucky_names"))
+					rs.update				
+				end if				
 			%>
 	</head>
 	<body>
@@ -26,14 +28,14 @@
 						</td>
 					</tr>
 					<tr>
-						<td height="400" align="center" bgcolor="#ffffff" vAlign="top"><p><%=Deal(request.form("lucky_names"))%></p>
+						<td height="20" align="center" bgcolor="#ffffff" vAlign="top"> </td>
+					</tr>
+					<tr>
+						<td height="400" align="center" bgcolor="#ffffff" vAlign="top"><p><%=Deal(rs("lucky_names"))%></p>
 						</td>
 					</tr>
 					<tr>
-						<td align="center" bgcolor="#ffffff"><input type="hidden" value="清除幸运人员名单" ID="Submit1" NAME="Submit1"></td>
-					</tr>
-					<tr>
-						<td height="15" align="center"></td>
+						<td bgcolor="#ffffff" align="center" valign="bottom" colspan="8"><a href="index.asp"> <img src="images/back.jpg" width="139" height="40" border="0"></a></td>
 					</tr>
 					<tr>
 						<td>
