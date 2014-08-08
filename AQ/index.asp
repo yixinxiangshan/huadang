@@ -16,23 +16,7 @@ session("ydQuestions") = ""      '已经答过的题目
 %>
 		<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
 		<link href="css.css" rel="stylesheet" type="text/css">
-	</HEAD>
-	<script language="Javascript" type="text/javascript">
-		function startAQ() {
-			var startDate = new Date("<%=my_start_date()%>");
-			var stopDate = new Date("<%=my_stop_date()%>");
-			var now = new Date();
-			if (now < startDate) {
-				alert("竞赛尚未开始");
-			}
-			else if (now > stopDate) {
-				alert("竞赛已经结束");				
-			}
-			else{
-				window.location.href = 'AQ.asp';
-			}
-		}
-	</script>
+	</HEAD>	
 	<body>
 		<div align="center">
 			<table width="960" border="0" cellspacing="0" cellpadding="0">
@@ -89,7 +73,7 @@ session("ydQuestions") = ""      '已经答过的题目
 													<tr>
 														<td align="center"><table width="95%" border="0" cellspacing="0" cellpadding="0">
 																<tr>
-																	<td height="75" align="center"><a onClick="startAQ();"><img src="images/StartAnswer.jpg" width="162" height="42" border="0"></a></td>
+																	<td height="75" align="center"><div id="start_div" name="start_div"></div></td>
 																</tr>
 																<tr>
 																	<td height="30" class="fontWhiteHeight23">最近答题人员记录:</td>
@@ -543,3 +527,21 @@ End Function
 %>
 	</body>
 </HTML>
+<script language="Javascript" type="text/javascript">
+	var startDate = parseDate("<%=my_start_date()%>");
+	var stopDate = parseDate("<%=my_stop_date()%>");
+	var now = new Date();
+	if (now < startDate) {
+		document.all.start_div.innerHTML = '<a><img src="images/StartAnswer.png" width="162" height="42" border="0"></a>';
+	}
+	else if (now > stopDate) {
+		document.all.start_div.innerHTML = '<a><img src="images/StartAnswer.png" width="162" height="42" border="0"></a>';
+	}
+	else{
+		document.all.start_div.innerHTML = '<a href="AQ.asp"><img src="images/StartAnswer.jpg" width="162" height="42" border="0"></a>';
+	}		
+	function parseDate(str) {
+		var v=str.split(' ');
+		return new Date(Date.parse(v[1]+" "+v[2]+", "+v[5]+" "+v[3]+" UTC"));
+	} 
+</script>

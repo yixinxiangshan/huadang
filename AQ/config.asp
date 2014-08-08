@@ -1,12 +1,12 @@
 <%
 '答题开始时间
 Function my_start_date()
-	my_start_date = "2014-08-01"
+	my_start_date = "Mon Sept 1 00:00:00 +0000 2014"
 End Function
 
 '答题结束时间
 Function my_stop_date()
-	my_stop_date = "2014-09-01"
+	my_stop_date = "Fri Sept 26 00:00:00 +0000 2014"
 End Function
 
 '答题超时
