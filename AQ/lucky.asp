@@ -28,14 +28,39 @@
 						</td>
 					</tr>
 					<tr>
-						<td height="20" align="center" bgcolor="#ffffff" vAlign="top"> </td>
+						<td height="80px" align="center" style="color:red;font-size:50px" bgcolor="#ffffff" vAlign="top">»ñ½±Ãûµ¥</td>
 					</tr>
 					<tr>
-						<td height="400" align="center" bgcolor="#ffffff" vAlign="top"><p><%=Deal(rs("lucky_names"))%></p>
+						<td>
+						<table width="100%" border="0" cellspacing="0" cellpadding="0" ID="Table1">
+						<%
+						names = split(Deal(rs("lucky_names")), "£»")
+						i = 0
+						do while i <> 10
+							%>
+							<tr>
+							<%
+							j = 0
+							do while j <> 5
+								%>
+								<td align="center" bgcolor="#ffffff" style="color:red" height="24px" width="170px" ><p><%=names(i * 5 + j)%></p></td>
+								<%
+								j = j + 1
+							loop
+							%>
+							</tr>
+							<%
+							i = i + 1
+						loop
+						%>
+						</table>
 						</td>
-					</tr>
+					</tr>	
 					<tr>
-						<td bgcolor="#ffffff" align="center" valign="bottom" colspan="8"><a href="index.asp"> <img src="images/back.jpg" width="139" height="40" border="0"></a></td>
+						<td height="20" align="center" bgcolor="#ffffff" vAlign="bottom"> </td>
+					</tr>					
+					<tr>
+						<td width="960" bgcolor="#ffffff" align="center" valign="bottom" colspan="8"><a href="index.asp"><img src="images/back.jpg" width="139" height="40" border="0"></a></td>
 					</tr>
 					<tr>
 						<td>
