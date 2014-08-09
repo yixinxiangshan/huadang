@@ -13,11 +13,12 @@
 	             set rs=server.createobject("adodb.recordset")
 	             sql = "select * from members where M_RightNum = " & my_all_number()
                  rs.open sql,conn,1,1
-				 i = 1
+				 i = 0
 				 do while not rs.eof
 					name = "'" & Deal(rs("M_Name")) & "(" & Deal(rs("M_MP")) & ")',"
 					response.write(name)
 					rs.movenext
+					i = i +1
                  loop
 				%>
 	];
@@ -78,10 +79,10 @@
 						<div id="ctrl"></div>
 						<div class="oneOut"><div></div>
 						</div>
-						<div class="Top"><div id="Go"><fieldset class="MainBG"><div id="Main"><h2 class="title"><input class="QD" onclick="group();" type="button" value="启动抽奖系统"/></h2>
-										<div class="input"></div>
+						<div class="Top"><div id="Go"><fieldset class="MainBG"><div id="Main"><h2 class="title"><input class="QD" onclick="group();" type="button" value="启动抽奖系统" <%if i < 50 then response.Write("disabled")%>/></h2>
+										<div class="input"><%if i < 50 then response.Write("优秀的人少于50个，无法开始抽奖")%></div>
 									</div>
-									<div id="input"><input id="start" name="start" type="button" value="开始(空格)" /><input id="end" name="end" type="button" value="停止(空格)" /><input id="login" name="login" type="button" value="下一组(回车)" onclick="confirm();" /></div>
+									<div id="input"><input id="start" name="start" type="button" value="开始(空格)" disabled /><input id="end" name="end" type="button" value="停止(空格)" disabled /><input id="login" name="login" type="button" value="下一组(回车)" onclick="confirm();" disabled /></div>
 								</fieldset></div>
 							<div id="out"><fieldset><legend> 中奖结果 </legend>
 									<ul id="tableOUT">
