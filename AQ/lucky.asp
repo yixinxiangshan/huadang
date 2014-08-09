@@ -57,11 +57,14 @@
 						</td>
 					</tr>	
 					<tr>
-						<td height="20" align="center" bgcolor="#ffffff" vAlign="bottom"> </td>
+						<td height="40" align="center" bgcolor="#ffffff" vAlign="bottom"> </td>
 					</tr>					
 					<tr>
 						<td width="960" bgcolor="#ffffff" align="center" valign="bottom" colspan="8"><a href="index.asp"><img src="images/back.jpg" width="139" height="40" border="0"></a></td>
-					</tr>
+					</tr>					
+					<tr>
+						<td height="20" align="center" bgcolor="#ffffff" vAlign="bottom"> </td>
+					</tr>	
 					<tr>
 						<td>
 							<table width="100%" border="0" cellspacing="0" cellpadding="0">

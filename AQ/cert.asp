@@ -20,7 +20,10 @@ end if
 				<td>
 					<!--#include file= include/top.asp-->
 				</td>
-			</tr>
+			</tr>				
+			<tr>
+				<td height="40" align="center" bgcolor="#ffffff" vAlign="bottom"> </td>
+			</tr>	
 			<tr>
 				<td align="center" bgcolor="#FFFFFF">
 					<!-- Save for Web Slices (cert.jpg) -->
@@ -82,11 +85,17 @@ end if
 					<img src="images/spacer.gif" width="102" height="1" alt=""></td>
 				<td>
 					<img src="images/spacer.gif" width="287" height="1" alt=""></td>
-			</tr>
+			</tr>						
+			<tr>
+				<td height="40" align="center" bgcolor="#ffffff" vAlign="bottom"> </td>
+			</tr>	
 			<tr>
 				<td align="center" colspan="8"><a href="index.asp"> <img src="images/back.jpg" width="139" height="40" border="0"></a>
 				</td>
-			</tr>
+			</tr>				
+			<tr>
+				<td height="20" align="center" bgcolor="#ffffff" vAlign="bottom"> </td>
+			</tr>	
 		</table>
 		<!-- End Save for Web Slices -->
 		</td> </tr>
