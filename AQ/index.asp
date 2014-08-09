@@ -73,7 +73,7 @@ session("ydQuestions") = ""      '已经答过的题目
 													<tr>
 														<td align="center"><table width="95%" border="0" cellspacing="0" cellpadding="0">
 																<tr>
-																	<td height="75" align="center"><div id="start_div" name="start_div"></div><div><a href="lucky.asp"><img src="images/StartAnswer.jpg" width="162" height="42" border="0"></a></div></td>
+																	<td height="75" align="center"><div id="start_div" name="start_div"></div></td>
 																</tr>
 																<tr>
 																	<td height="30" class="fontWhiteHeight23">最近答题人员记录:</td>
@@ -151,7 +151,7 @@ session("ydQuestions") = ""      '已经答过的题目
 																		2) 答题结束后需实名提交，并填写工作单位。为区别同名同姓者，请答题者务必<br>
 																		&nbsp;&nbsp; 填写联系方式（手机号）。<br>
 																		3) 活动结束后， 将在优秀证书获得者中，随机抽取50名幸运参赛者，给予纪念<br>
-																		&nbsp;&nbsp; 品1份。</td>
+																		&nbsp;&nbsp; 品1份。<a href="lucky.asp">查看获奖名单</a></td>
 																</tr>
 															</table>
 														</td>
