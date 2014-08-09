@@ -5,7 +5,7 @@
 		<title>2014年社会主义核心价值观网上知识竞赛</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
 		<link href="css.css" rel="stylesheet" type="text/css">
-			<%			
+			<%
 				Set rs = Server.CreateObject("adodb.recordset")
 				sql="select * from lucky_names"
 				rs.open sql,conn,1,3
@@ -14,8 +14,8 @@
 				end if
 				if InStr(request.servervariables("http_referer"), "choujiang.asp") > 0 then
 					rs("lucky_names") = Deal(request.form("lucky_names"))
-					rs.update				
-				end if				
+					rs.update
+				end if
 			%>
 	</head>
 	<body>
