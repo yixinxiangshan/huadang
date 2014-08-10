@@ -101,6 +101,10 @@
                     BuildAction = "Content"
                 />
                 <File
+                    RelPath = "import.asp"
+                    BuildAction = "Content"
+                />
+                <File
                     RelPath = "index.asp"
                     BuildAction = "Content"
                 />
