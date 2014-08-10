@@ -32,7 +32,7 @@
 					</tr>
 					<tr>
 						<td>
-						<table width="100%" border="0" cellspacing="0" cellpadding="0" ID="Table1">
+						<table width="100%" border="0" margin="15px" cellspacing="0" cellpadding="0" ID="Table1">
 						<%
 						names = split(Deal(rs("lucky_names")), "£»")
 						i = 0
@@ -43,7 +43,7 @@
 							j = 0
 							do while j <> 5
 								%>
-								<td align="center" bgcolor="#ffffff" style="color:red" height="24px" width="170px" ><p><%=names(i * 5 + j)%></p></td>
+								<td align="center" bgcolor="#ffffff" class="font14BlackHeight25" height="24px" width="170px" ><p><%=names(i * 5 + j)%></p></td>
 								<%
 								j = j + 1
 							loop
