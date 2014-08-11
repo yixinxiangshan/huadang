@@ -4,14 +4,11 @@
 	input_array = split(request.Form("input"), vbnewline)
 	
 	Set rs = Server.CreateObject("ADODB.Recordset")
-    sql="select max(ID) as max_ID from Questions"
-	rs.open sql,conn,1,1
-	max_id = rs("max_ID")
-	rs.close
 	sql="select * from Questions"
 	rs.open sql,conn,1,3
 	
 	i = 0
+	max_id = 0
 	input_array_array = split("0|1|2|3|4|5|6|7", "|")
 	do while i <= ubound(input_array)
 		input_array_array = split(input_array(i), "|")
