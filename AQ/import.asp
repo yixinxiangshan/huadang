@@ -9,7 +9,6 @@
 	
 	i = 0
 	max_id = 0
-	input_array_array = split("0|1|2|3|4|5|6|7", "|")
 	do while i <= ubound(input_array)
 		input_array_array = split(input_array(i), "|")
 		rs.AddNew
@@ -27,12 +26,15 @@
 			rs("C_1") = ""
 			rs("C_2") = ""
 			rs("C_3") = ""
-			rs("C_4") = ""
 		else
 			rs("C_1") = input_array_array(3)
 			rs("C_2") = input_array_array(4)
-			rs("C_3") = input_array_array(5)
+			rs("C_3") = input_array_array(5)		
+		end if
+		if ubound(input_array_array) > 5 then
 			rs("C_4") = input_array_array(6)
+		else
+			rs("C_4") = ""
 		end if
 		if ubound(input_array_array) = 7 then
 			rs("C_5") = input_array_array(7)
@@ -83,12 +85,25 @@
 									
 				data.push('<td>' + input_array_array[1] + '</td>');
 				data.push('<td>' + input_array_array[2] + '</td>');
-				data.push('<td>' + input_array_array[3] + '</td>');
-				data.push('<td>' + input_array_array[4] + '</td>');
-				data.push('<td>' + input_array_array[5] + '</td>');
-				data.push('<td>' + input_array_array[6] + '</td>');
 				
-				if(input_array_array.length > 7){
+				if (input_array_array[0] == "2") {
+					data.push('<td></td>');
+					data.push('<td></td>');
+					data.push('<td></td>');
+				} else{				
+					data.push('<td>' + input_array_array[3] + '</td>');
+					data.push('<td>' + input_array_array[4] + '</td>');
+					data.push('<td>' + input_array_array[5] + '</td>');
+				}
+				
+				if (input_array_array.length > 6){
+					data.push('<td>' + input_array_array[6] + '</td>');
+				}
+				else{
+					data.push('<td></td>');
+				}
+				
+				if (input_array_array.length > 7){
 					data.push('<td>' + input_array_array[7] + '</td>');
 				}
 				else{
