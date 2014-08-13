@@ -28,7 +28,7 @@ h2.title{margin-top:20px;font-size:48px;color: #800000;line-height:28px;font-wei
 #Main{text-align:center;}
 .MainBG{height:350px;margin:0px 15px 0 15px;filter:Alpha(Opacity=85);-moz-opacity:0.7;/*兼容的透明样式*/padding:5px;}
 .input{margin-top:-10px;}
-.input input{text-align:center;margin:2px 2px;display:inline;background-color:#fff;color:#020000; border:1px red dashed;}
+.input input{margin:2px 2px;}
 
 #input{text-align:center;}
 #input input{height:40px;width:100px;margin:15px 5px 5px;}
@@ -38,12 +38,13 @@ h2.title{margin-top:20px;font-size:48px;color: #800000;line-height:28px;font-wei
 #out #tableOUT{overflow-x:hidden;overflow-y:auto;height:300px;padding-top:5px;}
 #out .oTitle{padding:0 10px;line-height:20px;font-weight:bolder;}
 #out .oMain{ padding:0 5px; line-height:20px; font-size:14px;}
-#out li{border-bottom:1px white dashed;clear:both;padding-top:2px;line-height:30px;zoom:1;color:red}
+#out li{border-bottom:1px white dashed;clear:both;padding-top:2px;line-height:30px;zoom:1;color:black;}
 .oneOut{display:none; width:50%;height:145px; position:absolute;z-index:1000;left:25%;top:320px;overflow:hidden;}
 .oneOut div{width:360px;height:145px; margin:0 auto; background:url(u.gif) no-repeat; text-align:center; color:yellow; line-height:140px; font-family:黑体; font-size:100px;font-weight:bold;}
 .OFF{position: absolute;z-index: 1;right: 10px;top: 10px;cursor:pointer;font-weight:bolder;color:orange;}
 .CTRL{position: absolute;z-index: 1;right: 45px;top: 10px;cursor:pointer;font-weight:bolder;color:orange;}
-.QD{width:200px;height:60px;font-size:28px;}
+.QD{width:200px;height:60px;}
+
 
 /*参数控制相关*/
 #ctrl{
