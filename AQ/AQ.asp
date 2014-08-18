@@ -90,7 +90,11 @@ end if
 	end if
 	answer = mid(answerList,4,1)
     if (rs("A_" & answer)) then
-		rightAnswer = rightAnswer & ":4"
+		if rs("C_4") <> "" then
+			rightAnswer = rightAnswer & ":4"
+		else
+			rightAnswer = rightAnswer & ":" & InStr(answerList, "4") 
+		end if
 	end if
 	
 	'add question score
@@ -268,7 +272,19 @@ function hideElement(obj) {
 					Case 3
 						response.write(rs("C_3"))				
 					Case 4
-						response.write(rs("C_4"))				  
+						if rs("C_4") <> "" then							
+							response.write(rs("C_4"))
+						else
+							tempInt = Cint(mid(answerList,4,1))
+							Select Case tempInt
+								Case 1
+									response.write(rs("C_1"))
+								Case 2
+									response.write(rs("C_2"))		
+								Case 3
+									response.write(rs("C_3"))
+							End Select
+						end if
 				End Select
 			  end if 
 			%>
@@ -293,7 +309,19 @@ function hideElement(obj) {
 					Case 3
 						response.write(rs("C_3"))				 
 					Case 4
-						response.write(rs("C_4"))				 
+						if rs("C_4") <> "" then							
+							response.write(rs("C_4"))
+						else
+							tempInt = Cint(mid(answerList,4,1))
+							Select Case tempInt
+								Case 1
+									response.write(rs("C_1"))
+								Case 2
+									response.write(rs("C_2"))		
+								Case 3
+									response.write(rs("C_3"))
+							End Select
+						end if
 				End Select 
 			  end if
 			%>
@@ -313,7 +341,19 @@ function hideElement(obj) {
 					Case 3
 						response.write(rs("C_3"))				 
 					Case 4
-						response.write(rs("C_4"))				 
+						if rs("C_4") <> "" then							
+							response.write(rs("C_4"))
+						else
+							tempInt = Cint(mid(answerList,4,1))
+							Select Case tempInt
+								Case 1
+									response.write(rs("C_1"))
+								Case 2
+									response.write(rs("C_2"))		
+								Case 3
+									response.write(rs("C_3"))
+							End Select
+						end if
 				End Select 
 			end if
 			%>
@@ -321,20 +361,22 @@ function hideElement(obj) {
 											</tr>
 											<tr>
 												<td height="50"><span class="font14BlackHeight25">
-														<input type='<%=get_input_type(rs("Q_type"), 4)%>' name="s90DT" value="4" />
+														<input type='<%if rs("C_4") <> "" then response.Write(get_input_type(rs("Q_type"), 4)) else response.Write("hidden") end if%>' name="s90DT" value="4" />
 														<%
-            if rs("Q_type") <> 2 then
-			  tempInt = Cint(mid(answerList,4,1))
-			  Select Case tempInt
-			     Case 1
-				     response.write(rs("C_1"))
-			     Case 2
-				     response.write(rs("C_2"))		
-			     Case 3
-				     response.write(rs("C_3"))				 
-				 Case 4
-				     response.write(rs("C_4"))				 
-			  End Select 
+			if rs("C_4") <> "" then
+				if rs("Q_type") <> 2 then
+				tempInt = Cint(mid(answerList,4,1))
+				Select Case tempInt
+					Case 1
+						response.write(rs("C_1"))
+					Case 2
+						response.write(rs("C_2"))		
+					Case 3
+						response.write(rs("C_3"))				 
+					Case 4
+						response.write(rs("C_4"))				 
+				End Select 
+				end if
 			end if
 			%>
 													</span></td>
@@ -394,7 +436,7 @@ function hideElement(obj) {
 									<td width="50%" valign="top" class="fontYellowHeight23">网站简介 | <a href="/hhdj/webpage/comment.asp" target="_blank" class="yellowNagative">
 											互动交流</a> | <a href="/hhdj/bbs" class="yellowNagative">在线论坛</a> | <a href="mailto:shuji@huahong.com.cn" class="yellowNagative">
 											书记信箱</a> | <a href="/hhdj/webpage/sitemap.htm" target="_blank" class="yellowNagative">
-											网站地图</a> |<input name="aR" id="aR" value="<%=rightAnswer%>"><a href="/hhdj/webpage/copyright.htm" target="_blank" class="yellowNagative">版权声明</a><br>
+											网站地图</a> |<input name="aR" id="aR" value="<%=rightAnswer%>"><input id="Text1" value="<%=answerList%>"><a href="/hhdj/webpage/copyright.htm" target="_blank" class="yellowNagative">版权声明</a><br>
 										2014 中共上海华虹（集团）有限公司委员会主办 版权所有
 										<br>
 										最佳浏览 1024x768 分辨率
