@@ -11,12 +11,12 @@ End Function
 
 '答题超时
 Function my_timeout()
-	my_timeout = 10
+	my_timeout = 30
 End Function
 
 '最大能错误的题目数
 Function my_failed_score()
-	my_failed_score = 10
+	my_failed_score = 40
 End Function
 
 '所有题目数
@@ -26,12 +26,12 @@ End Function
 
 '所有补充单选题目数
 Function my_normal_single_number()
-	my_normal_single_number = 2
+	my_normal_single_number = 18
 End Function
 
 '所有补充复选题目数
 Function my_normal_multi_number()
-	my_normal_multi_number = 1
+	my_normal_multi_number = 9
 End Function
 
 '所有补充单选题目数
@@ -46,7 +46,7 @@ End Function
 
 '主页排名个数
 Function my_ranking_number()
-	my_ranking_number = 20
+	my_ranking_number = 10
 End Function
 
 Function get_company(company_code)	
