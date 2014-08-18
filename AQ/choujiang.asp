@@ -82,7 +82,7 @@
 						<div class="Top"><div id="Go"><fieldset class="MainBG"><div id="Main"><h2 class="title"><input class="QD" onclick="group();" type="image" src="images/startDraw.jpg" alt="启动抽奖系统" <%if i < 50 then response.Write("disabled")%>/></h2>
 										<div class="input"><%if i < 50 then response.Write("优秀的人少于50个，无法开始抽奖")%></div>
 									</div>
-									<div><input id="start" src="images/startDisabled.jpg" name="start" type="image" alt="开始(空格)" disabled />&nbsp;&nbsp;<input id="end" src="images/pauseDisabled.jpg" name="end" type="image" alt="停止(空格)" disabled />&nbsp;&nbsp;<input id="login" src="images/nextRoundDisabled.jpg" name="login" type="image" alt="下一组(回车)" onclick="confirm();" disabled /></div>
+									<div><input id="start" src="images/start.jpg" name="start" type="image" alt="开始(空格)" disabled />&nbsp;&nbsp;<input id="end" src="images/pause.jpg" name="end" type="image" alt="停止(空格)" disabled />&nbsp;&nbsp;<input id="login" src="images/next.jpg" name="login" type="image" alt="下一组(回车)" onclick="confirm();" disabled /></div>
 								</fieldset></div>
 							<div id="out"><fieldset><legend> 中奖结果 </legend>
 									<ul id="tableOUT">

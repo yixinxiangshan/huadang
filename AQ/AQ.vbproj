@@ -157,6 +157,10 @@
                     BuildAction = "None"
                 />
                 <File
+                    RelPath = "DB\¸´¼þ JNJPContest.mdb"
+                    BuildAction = "None"
+                />
+                <File
                     RelPath = "images\answer_Top_Bk.jpg"
                     BuildAction = "Content"
                 />
@@ -301,6 +305,22 @@
                     BuildAction = "Content"
                 />
                 <File
+                    RelPath = "images\nextRound.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\nextRoundDisabled.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\pause.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\pauseDisabled.jpg"
+                    BuildAction = "Content"
+                />
+                <File
                     RelPath = "images\printCert.jpg"
                     BuildAction = "Content"
                 />
@@ -313,11 +333,23 @@
                     BuildAction = "Content"
                 />
                 <File
+                    RelPath = "images\start.jpg"
+                    BuildAction = "Content"
+                />
+                <File
                     RelPath = "images\StartAnswer.jpg"
                     BuildAction = "Content"
                 />
                 <File
                     RelPath = "images\StartAnswer.png"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\startDisabled.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\startDraw.jpg"
                     BuildAction = "Content"
                 />
                 <File
