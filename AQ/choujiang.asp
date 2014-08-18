@@ -86,7 +86,7 @@
 								</fieldset></div>
 							<div id="out"><fieldset><legend> ÖÐ½±½á¹û </legend>
 									<ul id="tableOUT">
-										<li style="display:none" />
+										<li style="display:none color:black" />
 									</ul>
 								</fieldset></div>
 						</div>
