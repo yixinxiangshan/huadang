@@ -65,6 +65,10 @@
         <Files>
             <Include>
                 <File
+                    RelPath = "allmembers.asp"
+                    BuildAction = "Content"
+                />
+                <File
                     RelPath = "AQ.asp"
                     BuildAction = "Content"
                 />

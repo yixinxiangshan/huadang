@@ -52,15 +52,15 @@ End Function
 Function get_company(company_code)	
 	select case company_code
         case "1" 
-            get_company = "华虹NEC"
+            get_company = "华虹宏力"
         case "2" 
-            get_company = "华力微电子"
+            get_company = "华力"
         case "3" 
             get_company = "研发中心"
         case "4" 
             get_company = "华虹计通"							
         case "5" 
-            get_company = "虹日、进出口"
+            get_company = "虹日、挚芯"
         case "6" 
             get_company = "总部、华虹科技"
     end select	

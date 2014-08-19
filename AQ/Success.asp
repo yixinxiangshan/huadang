@@ -165,12 +165,12 @@ end if
 																					<td align="right" class="font14BlackHeight25"><span class="fontBlackHeight">代 表 队：</span></td>
 																					<td><select name="T_Company" class="fontBlackHeight" id="T_Company" onChange="clearT_Company()">
 																							<option value="0" selected>==请选择所属代表队==</option>
-																							<option value="1">华虹NEC代表队</option>
-																							<option value="2">华力微电子代表队</option>
-																							<option value="3">研发中心代表队</option>
-																							<option value="4">华虹计通代表队</option>
-																							<option value="5">虹日、进出口联队</option>
-																							<option value="6">集团总部、华虹科技发展联队</option>
+																							<option value="1"><%=get_company(1)%></option>
+																							<option value="2"><%=get_company(2)%></option>
+																							<option value="3"><%=get_company(3)%></option>
+																							<option value="4"><%=get_company(4)%></option>
+																							<option value="5"><%=get_company(5)%></option>
+																							<option value="6"><%=get_company(6)%></option>
 																						</select></td>
 																					<td class="fontRedHeight23">(*必填)</td>
 																				</tr>

@@ -91,24 +91,7 @@ session("ydQuestions") = ""      '已经答过的题目
 																				<td width="15%" height="24" align="left" class="fontBlackHeight23"><%=cint(rs("M_RightNum")*100/my_all_number())%>%</td>
 																				<td width="15%" height="24" align="left" class="fontBlackHeight23"><%=cint(rs("M_DurationTime"))%>秒</td>
 																				<td width="25%" height="24" align="center" class="fontBlackHeight23"><%=Format_Time(rs("M_DataTime"),2)%></td>
-																				<td width="27%" height="24" align="left"><span class="fontBlackHeight23">
-																						<%
-					  select case trim(rs("M_Company"))
-                          case "1" 
-                                response.write("华虹NEC")
-                          case "2" 
-                                response.write("华力微电子")
-                          case "3" 
-                                response.write("研发中心")
-                          case "4" 
-                                response.write("华虹计通")								
-                          case "5" 
-                                response.write("虹日、进出口")
-                          case "6" 
-                                response.write("总部、华虹科技")
-                          end select					  
-					  %>
-																					</span></td>
+																				<td width="27%" height="24" align="left"><span class="fontBlackHeight23"><%=get_company(trim(rs("M_Company")))%></span></td>
 																			</tr>
 																			<%                      
 				       rs.movenext 
@@ -272,37 +255,37 @@ session("ydQuestions") = ""      '已经答过的题目
 																							<td height="7" align="right"></td>
 																						</tr>
 																						<tr>
-																							<td align="right"><span class="fontBlackHeight23">华虹NEC代表队</span></td>
+																							<td align="right"><span class="fontBlackHeight23"><%=get_company(1)%></span></td>
 																						</tr>
 																						<tr>
 																							<td height="22" align="right">&nbsp;</td>
 																						</tr>
 																						<tr>
-																							<td align="right"><span class="fontBlackHeight23">华力代表队</span></td>
+																							<td align="right"><span class="fontBlackHeight23"><%=get_company(2)%></span></td>
 																						</tr>
 																						<tr>
 																							<td height="22" align="right">&nbsp;</td>
 																						</tr>
 																						<tr>
-																							<td align="right"><span class="fontBlackHeight23">研发中心代表队</span></td>
+																							<td align="right"><span class="fontBlackHeight23"><%=get_company(3)%></span></td>
 																						</tr>
 																						<tr>
 																							<td height="22" align="right">&nbsp;</td>
 																						</tr>
 																						<tr>
-																							<td align="right"><span class="fontBlackHeight23">计通代表队</span></td>
+																							<td align="right"><span class="fontBlackHeight23"><%=get_company(4)%></span></td>
 																						</tr>
 																						<tr>
 																							<td height="22" align="right">&nbsp;</td>
 																						</tr>
 																						<tr>
-																							<td align="right"><span class="fontBlackHeight23">虹日、进出口联队</span></td>
+																							<td align="right"><span class="fontBlackHeight23"><%=get_company(5)%></span></td>
 																						</tr>
 																						<tr>
 																							<td height="15" align="right"></td>
 																						</tr>
 																						<tr>
-																							<td align="right"><span class="fontBlackHeight23">总部、华虹科技联队</span></td>
+																							<td align="right"><span class="fontBlackHeight23"><%=get_company(6)%></span></td>
 																						</tr>
 																					</table>
 																				</td>

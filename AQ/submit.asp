@@ -178,22 +178,7 @@ end if
 																</tr>
 																<tr>
 																	<td align="right" class="font14BlackHeight25"><span class="fontBlackHeight">所属组织：</span></td>
-																	<td class="fontRedHeight23"><%
-					  select case trim(M_Company)
-                          case "1" 
-                                response.write("华虹NEC代表队")
-                          case "2" 
-                                response.write("华力代表队")
-                          case "3" 
-                                response.write("研发中心代表队")
-                          case "4" 
-                                response.write("计通代表队")								
-                          case "5" 
-                                response.write("虹日、进出口联队")
-                          case "6" 
-                                response.write("总部、华虹科技联队")
-                          end select					  
-					  %></td>
+																	<td class="fontRedHeight23"><%=get_company(trim(M_Company))%></td>
 																	<td class="fontRedHeight23">&nbsp;</td>
 																</tr>
 																<tr>
@@ -276,22 +261,7 @@ end if
 																						</tr>
 																						<tr>
 																							<td align="right" class="font14BlackHeight25"><span class="fontBlackHeight">所属组织：</span></td>
-																							<td class="fontRedHeight23"><%
-					  select case trim(oldM_Company)
-                          case "1" 
-                                response.write("华虹NEC代表队")
-                          case "2" 
-                                response.write("华力代表队")
-                          case "3" 
-                                response.write("研发中心代表队")
-                          case "4" 
-                                response.write("计通代表队")								
-                          case "5" 
-                                response.write("虹日、进出口联队")
-                          case "6" 
-                                response.write("总部、华虹科技联队")
-                          end select					  
-					  %></td>
+																							<td class="fontRedHeight23"><%=get_company(trim(oldM_Company))%></td>
 																							<td class="fontRedHeight23">&nbsp;</td>
 																						</tr>
 																						<tr>
@@ -351,22 +321,7 @@ end if
 																						</tr>
 																						<tr>
 																							<td align="right" class="font14BlackHeight25"><span class="fontBlackHeight">所属组织：</span></td>
-																							<td class="fontRedHeight23"><%
-					  select case trim(M_Company)
-                          case "1" 
-                                response.write("华虹NEC代表队")
-                          case "2" 
-                                response.write("华力代表队")
-                          case "3" 
-                                response.write("研发中心代表队")
-                          case "4" 
-                                response.write("计通代表队")								
-                          case "5" 
-                                response.write("虹日、进出口联队")
-                          case "6" 
-                                response.write("总部、华虹科技联队")
-                          end select					  
-					  %></td>
+																							<td class="fontRedHeight23"><%=get_company(trim(M_Company))%></td>
 																							<td class="fontRedHeight23">&nbsp;</td>
 																						</tr>
 																						<tr>
