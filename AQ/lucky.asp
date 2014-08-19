@@ -43,7 +43,7 @@
 							j = 0
 							do while j <> 5
 								%>
-								<td align="center" bgcolor="#ffffff" class="font14BlackHeight25" height="24px" width="170px" ><p><%=names(i * 5 + j)%></p></td>
+								<td align="center" bgcolor="#ffffff" class="font14BlackHeight25" height="24px" width="170px" ><p><%=MarkPhone(names(i * 5 + j))%></p></td>
 								<%
 								j = j + 1
 							loop

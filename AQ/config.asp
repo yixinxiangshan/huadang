@@ -91,5 +91,9 @@ Function Deal(exp1)
 	 exp2=Replace(exp1,"&nbsp;","")
      exp2=Replace(exp2,"¡¡","")
      Deal=exp2
-End Function 
+End Function
+
+Function MarkPhone(exp1)
+	MarkPhone = Mid(exp1, 1, InStr(exp1, "(") + 3) & "****" & Mid(exp1, InStr(exp1, "(") + 8)
+End Function
 %>
