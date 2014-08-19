@@ -36,8 +36,7 @@ session("ydQuestions") = ""      '已经答过的题目
 													</tr>
 													<tr>
 														<td><p class="fontBlackHeight23">
-															<strong><span class="fontRedHeight23">活动时间</span></strong>：2014年9月1日—25日<br>
-															<strong><span class="fontRedHeight23">竞赛目的</span></strong>：为进一步推进华虹集团系统各级领导干部，全体党员和广大员工学习践行社会主义核心价值观<br>
+															<strong><span class="fontRedHeight23">活动时间</span></strong>：2014年9月1日—25日<br>														
 															</p>
 														</td>
 													</tr>
@@ -147,8 +146,8 @@ session("ydQuestions") = ""      '已经答过的题目
 																<tr>
 																	<td class="fontBlackHeight23">
 																		1) 网上答题每30题为一组，由电脑自动抽取，每组答题时间为15分钟,参赛者须<br>
-																		&nbsp;&nbsp; 达满60分以上获得合格证书。<br>
-																		2) 答题结束后需实名提交，并填写工作单位。为区别同名同姓者，请答题者务必<br>
+																		&nbsp;&nbsp; 达满60分以上获得合格证书，全部答对者获得优秀证书。<br>
+																		2) 答题结束后需实名提交，并填写所属工会。为区别同名同姓者，请答题者务必<br>
 																		&nbsp;&nbsp; 填写联系方式（手机号）。<br>
 																		3) 活动结束后， 将在优秀证书获得者中，随机抽取50名幸运参赛者，给予纪念<br>
 																		&nbsp;&nbsp; 品1份。<a href="lucky.asp">查看获奖名单</a></td>
