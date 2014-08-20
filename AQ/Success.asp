@@ -1,4 +1,5 @@
 <!--#include file= database.asp-->
+<!--#include file= config.asp-->
 <%
 if (session("M_RightNum")=0 or session("M_RightNum")="") or (session("M_ErrorNum")="") or (session("M_StarTime")=0 or session("M_StarTime")="") or (session("M_EndTime")=0 or session("M_EndTime")="") or (session("ydQuestions")="") or (InStr(request.servervariables("http_referer"),"AQ.asp")=0) then
     response.Redirect("index.asp")    '跳转到指定页面

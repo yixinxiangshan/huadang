@@ -1,4 +1,5 @@
 <!--#include file="database.asp"-->
+<!--#include file= config.asp-->
 <%
 Function Deal(exp1)
      dim exp2
