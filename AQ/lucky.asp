@@ -34,24 +34,26 @@
 						<td>
 						<table width="100%" border="0" margin="15px" cellspacing="0" cellpadding="0" ID="Table1">
 						<%
-						names = split(Deal(rs("lucky_names")), "£»")
-						i = 0
-						do while i <> 10
-							%>
-							<tr>
-							<%
-							j = 0
-							do while j <> 5
+						if rs("lucky_names") <> "" then
+							names = split(Deal(rs("lucky_names")), "£»")
+							i = 0
+							do while i <> 10
 								%>
-								<td align="center" bgcolor="#ffffff" class="font14BlackHeight25" height="24px" width="170px" ><p><%=MarkPhone(names(i * 5 + j))%></p></td>
+								<tr>
 								<%
-								j = j + 1
+								j = 0
+								do while j <> 5
+									%>
+									<td align="center" bgcolor="#ffffff" class="font14BlackHeight25" height="24px" width="170px" ><p><%=MarkPhone(names(i * 5 + j))%></p></td>
+									<%
+									j = j + 1
+								loop
+								%>
+								</tr>
+								<%
+								i = i + 1
 							loop
-							%>
-							</tr>
-							<%
-							i = i + 1
-						loop
+						end if
 						%>
 						</table>
 						</td>
