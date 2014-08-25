@@ -251,7 +251,7 @@ function hideElement(obj) {
 												<td height="10"></td>
 											</tr>
 											<tr>
-												<td height="50">
+												<td height="30">
 													<span class="font14BlackHeight25">
 														<label>
 															<input type='<%=get_input_type(rs("Q_type"), 1)%>' name="s90DT" value="1" />
@@ -291,7 +291,7 @@ function hideElement(obj) {
 													</span></td>
 											</tr>
 											<tr>
-												<td height="50"><span class="font14BlackHeight25">
+												<td height="30"><span class="font14BlackHeight25">
 														<input type='<%=get_input_type(rs("Q_type"), 2)%>' name="s90DT" value="2" />
 														<%
               if rs("Q_type") = 2 then
@@ -328,7 +328,7 @@ function hideElement(obj) {
 													</span></td>
 											</tr>
 											<tr>
-												<td height="50"><span class="font14BlackHeight25">
+												<td height="30"><span class="font14BlackHeight25">
 														<input type='<%=get_input_type(rs("Q_type"), 3)%>' name="s90DT" value="3" />
 														<%
             if rs("Q_type") <> 2 then
@@ -360,7 +360,7 @@ function hideElement(obj) {
 													</span></td>
 											</tr>
 											<tr>
-												<td height="50"><span class="font14BlackHeight25">
+												<td height="30"><span class="font14BlackHeight25">
 														<input type='<%if rs("C_4") <> "" then response.Write(get_input_type(rs("Q_type"), 4)) else response.Write("hidden") end if%>' name="s90DT" value="4" />
 														<%
 			if rs("C_4") <> "" then
@@ -382,7 +382,7 @@ function hideElement(obj) {
 													</span></td>
 											</tr>
 											<tr>
-												<td height="50"><span class="font14BlackHeight25">
+												<td height="30"><span class="font14BlackHeight25">
 														<input type='<%if rs("C_5") <> "" then response.Write(get_input_type(rs("Q_type"), 5)) else response.Write("hidden") end if%>' name="s90DT" value="5" />
 														<%
             if rs("C_5") <> "" then
@@ -396,7 +396,7 @@ function hideElement(obj) {
 									</td>
 								</tr>
 								<tr>
-									<td height="80" align="center" class="font14RedHeight25">
+									<td height="60" align="center" class="font14RedHeight25">
 										<div id="divAnswerError" style="display:none;">
 											<table width="200" border="0" cellpadding="0" cellspacing="0">
 												<tr>
@@ -408,7 +408,7 @@ function hideElement(obj) {
 										<div id="divAnswerRight" style="display:none;">
 											<table width="200" border="0" cellpadding="0" cellspacing="0">
 												<tr>
-													<td width="58"><img src="images/right.gif" width="73" height="80" /></td>
+													<td width="58"><img src="images/right.gif" width="60" height="60" /></td>
 													<td width="142" class="font14RedHeight25"><strong>恭喜你，答对啦！</strong></td>
 												</tr>
 											</table>
@@ -420,7 +420,7 @@ function hideElement(obj) {
 										&nbsp;&nbsp;<span class="font14RedHeight25">答错：</span><%=session("M_ErrorNum")%>题&nbsp;&nbsp;<span class="font14RedHeight25">已扣分数：</span><%=session("M_ErrorScore")%>分</td>
 								</tr>
 								<tr>
-									<td height="50" align="center"><a href="index.asp"><img src="images/back.jpg" width="139" height="40" border="0"></a>
+									<td height="40" align="center"><a href="index.asp"><img src="images/back.jpg" width="139" height="40" border="0"></a>
 										<a onClick="submitFun();"><img src="images/next.jpg" width="139" height="40" border="0"></a></td>
 								</tr>
 							</table>
