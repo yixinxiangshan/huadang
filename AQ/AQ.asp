@@ -1,7 +1,7 @@
 <!--#include file= database.asp-->
 <!--#include file= config.asp-->
 <%
-if (session("M_StarTime")=0) or (InStr(request.servervariables("http_referer"),"index.asp")>0) then        '开始答题
+if (session("M_StarTime")=0) and (InStr(request.servervariables("http_referer"),"index.asp")>0) then        '开始答题
    session("M_DurationTime") = 0       '持续时间
    session("M_RightNum") = 0           '答对的题目数
    session("M_ErrorNum") = 0           '答错的题目数
@@ -125,7 +125,7 @@ end if
 		<link href="css.css" rel="stylesheet" type="text/css">
 	</head>
 	<script language="Javascript" type="text/javascript"> 
-
+window.history.forward(1);
 var time_s_0 = <%if request.form("durationTime")="" then response.write("0") else response.write(request.form("durationTime")) end if%>;
 var this_time = 0;
  
