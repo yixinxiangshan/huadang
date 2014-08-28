@@ -161,10 +161,6 @@
                     BuildAction = "None"
                 />
                 <File
-                    RelPath = "DB\¸´¼þ JNJPContest.mdb"
-                    BuildAction = "None"
-                />
-                <File
                     RelPath = "images\answer_Top_Bk.jpg"
                     BuildAction = "Content"
                 />
