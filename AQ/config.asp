@@ -1,7 +1,7 @@
 <%
 '答题开始时间
 Function my_start_date()
-	my_start_date = "Mon Sept 1 00:00:00 +0000 2014"
+	my_start_date = "Mon Aug 25 00:00:00 +0000 2014"
 End Function
 
 '答题结束时间
@@ -26,17 +26,17 @@ End Function
 
 '所有补充单选题目数
 Function my_normal_single_number()
-	my_normal_single_number = 18
+	my_normal_single_number = 1
 End Function
 
 '所有补充复选题目数
 Function my_normal_multi_number()
-	my_normal_multi_number = 9
+	my_normal_multi_number = 1
 End Function
 
 '所有补充单选题目数
 Function my_single_number()
-	my_single_number = 2
+	my_single_number = 1
 End Function
 
 '所有补充复选题目数

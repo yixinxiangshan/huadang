@@ -26,6 +26,7 @@ else
 	M_DataTime     =       now()
 	M_Num          =       request.form("M_Num")
 	M_MP           =       trim(Deal(request.form("T_Contact")))
+	M_Department   =       trim(Deal(request.form("T_Department")))
 	M_StarTime     =       session("M_StarTime")
 	M_EndTime      =       session("M_EndTime")	
 	
@@ -52,6 +53,7 @@ else
 	      rs("M_DataTime")      =  M_DataTime
 	      rs("M_Num")           =  M_Num
 	      rs("M_MP")            =  M_MP
+	      rs("M_Department")    =  M_Department
 	      rs("M_StarTime")      =  M_StarTime
 	      rs("M_EndTime")       =  M_EndTime
 	      rs.update		
@@ -84,6 +86,7 @@ else
 	      rs("M_DataTime")      =  M_DataTime
 	      rs("M_Num")           =  M_Num
 	      rs("M_MP")            =  M_MP
+	      rs("M_Department")    =  M_Department
 	      rs("M_StarTime")      =  M_StarTime
 	      rs("M_EndTime")       =  M_EndTime
 	   rs.update		
@@ -188,6 +191,16 @@ end if
 																	<td class="font14RedHeight">&nbsp;</td>
 																</tr>
 																<tr>
+																	<td align="right" class="font14BlackHeight25"><span class="fontBlackHeight">所属部门：</span></td>
+																	<td class="fontRedHeight23"><%=M_Department%></td>
+																	<td class="fontRedHeight23">&nbsp;</td>
+																</tr>
+																<tr>
+																	<td align="right" class="font14BlackHeight25">&nbsp;</td>
+																	<td class="fontRedHeight23"></td>
+																	<td class="font14RedHeight">&nbsp;</td>
+																</tr>
+																<tr>
 																	<td align="right" class="font14BlackHeight25"><span class="fontBlackHeight">您的排名：</span></td>
 																	<td class="fontBlackRankTitle"><%=rankCount%></td>
 																	<td>&nbsp;</td>
@@ -267,6 +280,16 @@ end if
 																						</tr>
 																						<tr>
 																							<td align="right" class="font14BlackHeight25">&nbsp;</td>
+																							<td class="fontRedHeight23"></td>
+																							<td class="font14RedHeight">&nbsp;</td>
+																						</tr>
+																						<tr>
+																							<td align="right" class="font14BlackHeight25"><span class="fontBlackHeight">所属部门：</span></td>
+																							<td class="fontRedHeight23"><%=M_Department%></td>
+																							<td class="fontRedHeight23">&nbsp;</td>
+																						</tr>
+																						<tr>
+																							<td align="right" class="font14BlackHeight25">&nbsp;</td>
 																							<td class="fontRedHeight23">&nbsp;</td>
 																							<td class="fontRedHeight23">&nbsp;</td>
 																						</tr>
@@ -323,6 +346,16 @@ end if
 																						<tr>
 																							<td align="right" class="font14BlackHeight25"><span class="fontBlackHeight">所属组织：</span></td>
 																							<td class="fontRedHeight23"><%=get_company(trim(M_Company))%></td>
+																							<td class="fontRedHeight23">&nbsp;</td>
+																						</tr>
+																						<tr>
+																							<td align="right" class="font14BlackHeight25">&nbsp;</td>
+																							<td class="fontRedHeight23"></td>
+																							<td class="font14RedHeight">&nbsp;</td>
+																						</tr>
+																						<tr>
+																							<td align="right" class="font14BlackHeight25"><span class="fontBlackHeight">所属部门：</span></td>
+																							<td class="fontRedHeight23"><%=M_Department%></td>
 																							<td class="fontRedHeight23">&nbsp;</td>
 																						</tr>
 																						<tr>

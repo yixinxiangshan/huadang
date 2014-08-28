@@ -53,7 +53,7 @@ end if
 				<td colspan="2">
 					<img src="images/cert_06.gif" width="370" height="40" alt=""></td>
 				<td colspan="2" background="images/cert_07.gif" width="125" height="40" alt="" align="center">
-					<strong class="font20BlackHeight25">
+					<strong class="font20BlackHeight25_">
 						<%=session("M_Name")%>
 					</strong></span></td>
 				<td>
@@ -63,7 +63,7 @@ end if
 				<td colspan="2">
 					<img src="images/cert_09.gif" width="370" height="37" alt=""></td>
 				<td colspan="2" background="images/cert_10.gif" width="125" height="37" alt="" align="center">
-					<strong class="font20BlackHeight25">
+					<strong class="font20BlackHeight25_">
 						<%= Right(String(10, "0") & session("M_ID"), 5)%>
 					</strong>
 				</td>

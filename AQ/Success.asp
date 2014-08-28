@@ -176,6 +176,18 @@ end if
 																					<td class="fontRedHeight23">(*±ÿÃÓ)</td>
 																				</tr>
 																				<tr>
+																					<td align="right" class="font14BlackHeight25">&nbsp;</td>
+																					<td><span id="Span1" class="fontRedHeight23"></span></td>
+																					<td class="font14RedHeight">&nbsp;</td>
+																				</tr>
+																				<tr>
+																					<td align="right" class="font14BlackHeight25"><span class="fontBlackHeight">≤ø    &nbsp;&nbsp;&nbsp;√≈£∫</span></td>
+																					<td><span class="font14BlackHeight25">
+																							<input name="T_Department" type="text" class="fontBlackHeight" id="T_Department" size="28">
+																						</span></td>
+																					<td class="font14RedHeight"><span class="fontRedHeight23"></span></td>
+																				</tr>
+																				<tr>
 																					<td>&nbsp;</td>
 																					<td><span id="T_Company_error" class="fontRedHeight23"></span></td>
 																					<td>&nbsp;</td>

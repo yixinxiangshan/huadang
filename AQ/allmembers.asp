@@ -9,7 +9,11 @@
 				set rs=server.createobject("adodb.recordset")
 	            sql = "select * from lucky_names"
                 rs.open sql,conn,1,1
-				lucky_names = rs("lucky_names")
+                if rs.eof then
+					lucky_names = ""
+				else
+					lucky_names = rs("lucky_names")
+				end if
 				                    
 				Set rs = Server.CreateObject("adodb.recordset")
 				sql="select * from members order by M_Company, M_RightNum desc, M_DurationTime"
@@ -36,17 +40,21 @@
 								<td align="center"><span class="fontBlackHeight23"><strong>成功率</strong></span></td>
 								<td align="center"><span class="fontBlackHeight23"><strong>用时</strong></span></td>
 								<td align="center"><span class="fontBlackHeight23"><strong>所属单位</strong></span></td>
+								<td align="center"><span class="fontBlackHeight23"><strong>部门</strong></span></td>
+								<td align="center"><span class="fontBlackHeight23"><strong>手机</strong></span></td>
 								<td align="center"><span class="fontBlackHeight23"><strong>是否中奖</strong></span></td>
 							</tr>
 						<%
 						do while not rs.EOF
 							%>
 							<tr>								
-								<td width="20%" height="24" align="center" class="fontBlackHeight23"><%=Deal(rs("M_Name"))%></td>
-								<td width="20%" height="24" align="center" class="fontBlackHeight23"><%=cint(rs("M_RightNum")*100/my_all_number())%>%</td>
-								<td width="20%" height="24" align="center" class="fontBlackHeight23"><%=cint(rs("M_DurationTime"))%>秒</td>
-								<td width="25%" height="24" align="center" class="fontBlackHeight23"><%=get_company(trim(rs("M_Company")))%></td>
-								<td width="25%" height="24" align="center" class="fontBlackHeight23"><%if (InStr(lucky_names, rs("M_MP")) > 0) then response.Write("*") end if%></td>
+								<td width="15%" height="24" align="center" class="fontBlackHeight23"><%=Deal(rs("M_Name"))%></td>
+								<td width="10%" height="24" align="center" class="fontBlackHeight23"><%=cint(rs("M_RightNum")*100/my_all_number())%>%</td>
+								<td width="10%" height="24" align="center" class="fontBlackHeight23"><%=cint(rs("M_DurationTime"))%>秒</td>
+								<td width="15%" height="24" align="center" class="fontBlackHeight23"><%=get_company(trim(rs("M_Company")))%></td>
+								<td width="20%" height="24" align="center" class="fontBlackHeight23"><%=rs("M_Department")%></td>
+								<td width="15%" height="24" align="center" class="fontBlackHeight23"><%=rs("M_MP")%></td>
+								<td width="15%" height="24" align="center" class="fontBlackHeight23"><%if (InStr(lucky_names, rs("M_MP")) > 0) then response.Write("*") end if%></td>
 							</tr>
 							<%
 							rs.MoveNext
