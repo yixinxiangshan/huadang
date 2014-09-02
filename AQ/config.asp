@@ -11,7 +11,7 @@ End Function
 
 '答题超时
 Function my_timeout()
-	my_timeout = 30
+	my_timeout = 60
 End Function
 
 '最大能错误的题目数

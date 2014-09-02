@@ -128,7 +128,7 @@ session("ydQuestions") = ""      '已经答过的题目
 														<td align="center" valign="middle" class="fontBlackHeight23"><table width="100%" border="0" cellspacing="0" cellpadding="0">
 																<tr>
 																	<td class="fontBlackHeight23">
-																		1) 网上答题每30题为一组，由电脑自动抽取，每组答题时间为15分钟,参赛者须<br>
+																		1) 网上答题每30题为一组，由电脑自动抽取，每题答题时间为60秒钟,参赛者须<br>
 																		&nbsp;&nbsp; 达满60分以上获得合格证书，全部答对者获得优秀证书。<br>
 																		2) 答题结束后需实名提交，并填写所属工会。为区别同名同姓者，请答题者务必<br>
 																		&nbsp;&nbsp; 填写联系方式（手机号）。<br>
