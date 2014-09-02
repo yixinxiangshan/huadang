@@ -5,7 +5,7 @@ dim DBPath
 
 set conn=server.createobject("adodb.connection")
 DBPath = server.mappath("DB/JNJPContest.mdb")
-conn.Open "Driver={SQL Server};Description=sqldemo;SERVER=RICHARD-09FB09C\SQLEXPRESS;UID=sa;PWD=Cde3$rfv;DATABASE=huadang"
+conn.Open "Driver={SQL Server};Description=sqldemo;SERVER=HUADANG\SQLEXPRESS;UID=sa;PWD=Cde3$rfv;DATABASE=huadang"
 
 sub closeconn()    
     conn.close
