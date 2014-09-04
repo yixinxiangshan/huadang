@@ -289,6 +289,14 @@
                     BuildAction = "Content"
                 />
                 <File
+                    RelPath = "images\cert_template.jpg"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\cert_template2.jpg"
+                    BuildAction = "Content"
+                />
+                <File
                     RelPath = "images\cert2_03.gif"
                     BuildAction = "Content"
                 />
@@ -362,6 +370,10 @@
                 />
                 <File
                     RelPath = "images\right.gif"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "images\saveCert.jpg"
                     BuildAction = "Content"
                 />
                 <File
