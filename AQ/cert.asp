@@ -90,7 +90,8 @@ end if
 				<td height="40" align="center" bgcolor="#ffffff" vAlign="bottom"> </td>
 			</tr>	
 			<tr>
-				<td align="center" colspan="8"><a href="index.asp"> <img src="images/back.jpg" width="139" height="40" border="0"></a>
+				<td align="center" colspan="8"><a href="index.asp"> <img src="images/back.jpg" width="139" height="40" border="0"></a>&nbsp;&nbsp;
+				<a href="PicGen.aspx?name=<%=server.URLEncode(session("M_Name"))%>&id=<%= Right(String(10, "0") & session("M_ID"), 5)%>&isexcellent=<%=Is_Excellent%>"><img src="images/saveCert.jpg" width="139" height="40" border="0"></a>
 				</td>
 			</tr>				
 			<tr>
