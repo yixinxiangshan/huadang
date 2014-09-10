@@ -317,7 +317,7 @@ session("ydQuestions") = ""      '已经答过的题目
 				                    tempNum = cint(rs("countNum"))
 				                 %>
 																													<td><img src="images/bar_left.gif" width="5" height="16"></td>
-																													<td><img src="images/bar_middle.jpg" width="<%=cint((tempNum+10)*0.048)%>" height="16" ></td>
+																													<td><img src="images/bar_middle.jpg" width="<%=cint((tempNum+10)*0.036)%>" height="16" ></td>
 																													<td><img src="images/bar_Right.gif" width="4" height="16"></td>
 																													<td>&nbsp;</td>
 																													<td class="fontBlackHeight"><%=tempNum%></td>
@@ -338,7 +338,7 @@ session("ydQuestions") = ""      '已经答过的题目
 				                    tempNum = cint(rs("countNum"))
 				                 %>
 																													<td><img src="images/bar_left.gif" width="5" height="16"></td>
-																													<td><img src="images/bar_middle.jpg" width="<%=cint((tempNum+10)*0.048)%>" height="16" ></td>
+																													<td><img src="images/bar_middle.jpg" width="<%=cint((tempNum+10)*0.036)%>" height="16" ></td>
 																													<td><img src="images/bar_Right.gif" width="4" height="16"></td>
 																													<td>&nbsp;</td>
 																													<td class="fontBlackHeight"><%=tempNum%></td>
@@ -359,7 +359,7 @@ session("ydQuestions") = ""      '已经答过的题目
 				                    tempNum = cint(rs("countNum"))
 				                 %>
 																													<td><img src="images/bar_left.gif" width="5" height="16"></td>
-																													<td><img src="images/bar_middle.jpg" width="<%=cint((tempNum+10)*0.048)%>" height="16" ></td>
+																													<td><img src="images/bar_middle.jpg" width="<%=cint((tempNum+10)*0.036)%>" height="16" ></td>
 																													<td><img src="images/bar_Right.gif" width="4" height="16"></td>
 																													<td>&nbsp;</td>
 																													<td class="fontBlackHeight"><%=tempNum%></td>
@@ -380,7 +380,7 @@ session("ydQuestions") = ""      '已经答过的题目
 				                    tempNum = cint(rs("countNum"))
 				                 %>
 																													<td><img src="images/bar_left.gif" width="5" height="16"></td>
-																													<td><img src="images/bar_middle.jpg" width="<%=cint((tempNum+10)*0.048)%>" height="16" ></td>
+																													<td><img src="images/bar_middle.jpg" width="<%=cint((tempNum+10)*0.036)%>" height="16" ></td>
 																													<td><img src="images/bar_Right.gif" width="4" height="16"></td>
 																													<td>&nbsp;</td>
 																													<td class="fontBlackHeight"><%=tempNum%></td>
@@ -401,7 +401,7 @@ session("ydQuestions") = ""      '已经答过的题目
 				                    tempNum = cint(rs("countNum"))
 				                 %>
 																													<td><img src="images/bar_left.gif" width="5" height="16"></td>
-																													<td><img src="images/bar_middle.jpg" width="<%=cint((tempNum+10)*0.048)%>" height="16" ></td>
+																													<td><img src="images/bar_middle.jpg" width="<%=cint((tempNum+10)*0.036)%>" height="16" ></td>
 																													<td><img src="images/bar_Right.gif" width="4" height="16"></td>
 																													<td>&nbsp;</td>
 																													<td class="fontBlackHeight"><%=tempNum%></td>
@@ -422,7 +422,7 @@ session("ydQuestions") = ""      '已经答过的题目
 				                    tempNum = cint(rs("countNum"))
 				                 %>
 																													<td><img src="images/bar_left.gif" width="5" height="16"></td>
-																													<td><img src="images/bar_middle.jpg" width="<%=cint((tempNum+10)*0.048)%>" height="16" ></td>
+																													<td><img src="images/bar_middle.jpg" width="<%=cint((tempNum+10)*0.036)%>" height="16" ></td>
 																													<td><img src="images/bar_Right.gif" width="4" height="16"></td>
 																													<td>&nbsp;</td>
 																													<td class="fontBlackHeight"><%=tempNum%></td>
