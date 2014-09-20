@@ -10,6 +10,12 @@
 			<script type="text/javascript">
 	var m_name = [
 				<%
+				 set rs=server.createobject("adodb.recordset")
+	             sql = "select * from lucky_names"
+                 rs.open sql,conn,1,1
+                 if not rs.eof then
+					j = true
+				 end if
 	             set rs=server.createobject("adodb.recordset")
 	             sql = "select * from members where M_RightNum = " & my_all_number()
                  rs.open sql,conn,1,1
@@ -79,8 +85,8 @@
 						<div id="ctrl"></div>
 						<div class="oneOut"><div></div>
 						</div>
-						<div class="Top"><div id="Go"><fieldset class="MainBG"><div id="Main"><h2 class="title"><input class="QD" onclick="group();" type="image" src="images/startDraw.jpg" alt="启动抽奖系统" <%if i < 50 then response.Write("disabled")%>/></h2>
-										<div class="input"><%if i < 50 then response.Write("优秀的人少于50个，无法开始抽奖")%></div>
+						<div class="Top"><div id="Go"><fieldset class="MainBG"><div id="Main"><h2 class="title"><input class="QD" onclick="group();" type="image" src="images/startDraw.jpg" alt="启动抽奖系统" <%if i < 50 or j then response.Write("disabled")%>/></h2>
+										<div class="input"><%if j then response.Write("已经抽过奖，无法开始抽奖")%><%if i < 50 then response.Write("优秀的人少于50个，无法开始抽奖")%></div>
 									</div>
 									<div><input id="start" src="images/start.jpg" name="start" type="image" alt="开始(空格)" disabled />&nbsp;&nbsp;<input id="end" src="images/pause.jpg" name="end" type="image" alt="停止(空格)" disabled />&nbsp;&nbsp;<input id="login" src="images/next.jpg" name="login" type="image" alt="下一组(回车)" onclick="confirm();" disabled /></div>
 								</fieldset></div>

@@ -6,16 +6,16 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
 		<link href="css.css" rel="stylesheet" type="text/css">
 			<%
+				lucky_names = ""
 				Set rs = Server.CreateObject("adodb.recordset")
 				sql="select * from lucky_names"
 				rs.open sql,conn,1,3
-				if rs.eof then
+				if rs.eof and InStr(request.servervariables("http_referer"), "choujiang.asp") > 0 then
 					rs.addnew
-				end if
-				if InStr(request.servervariables("http_referer"), "choujiang.asp") > 0 then
 					rs("lucky_names") = Deal(request.form("lucky_names"))
-					rs.update
+					rs.update					
 				end if
+				lucky_names = rs("lucky_names")
 			%>
 	</head>
 	<body>
@@ -34,8 +34,8 @@
 						<td>
 						<table width="100%" border="0" margin="15px" cellspacing="0" cellpadding="0" ID="Table1">
 						<%
-						if rs("lucky_names") <> "" then
-							names = split(Deal(rs("lucky_names")), "；")
+						if lucky_names <> "" then
+							names = split(Deal(lucky_names), "；")
 							i = 0
 							do while i <> 10
 								%>
