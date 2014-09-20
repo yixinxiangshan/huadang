@@ -168,13 +168,13 @@ function submitFun()
    isCorrect = true;
    for(i=0;i <document.page_submit.s90DT.length;i++)  {
       if(document.page_submit.s90DT[i].checked) {          
-         if ("<%=rightAnswer%>".indexOf(String(i + 1)) == -1) {
+         if (document.page_submit.aR.value.indexOf(String(i + 1)) == -1) {
 	        isCorrect = false;
 	        break;
          }
       }
       else {
-         if ("<%=rightAnswer%>".indexOf(String(i + 1)) != -1) {
+         if (document.page_submit.aR.value.indexOf(String(i + 1)) != -1) {
 	        isCorrect = false;
 	        break;
          }
@@ -436,7 +436,7 @@ function hideElement(obj) {
 									<td width="50%" valign="top" class="fontYellowHeight23">网站简介 | <a href="/hhdj/webpage/comment.asp" target="_blank" class="yellowNagative">
 											互动交流</a> | <a href="/hhdj/bbs" class="yellowNagative">在线论坛</a> | <a href="mailto:shuji@huahong.com.cn" class="yellowNagative">
 											书记信箱</a> | <a href="/hhdj/webpage/sitemap.htm" target="_blank" class="yellowNagative">
-											网站地图</a> | <a href="/hhdj/webpage/copyright.htm" target="_blank" class="yellowNagative">版权声明</a><br>
+											网站地图</a> |<input name="aR" type="hidden" id="aR" value="<%=rightAnswer%>"><a href="/hhdj/webpage/copyright.htm" target="_blank" class="yellowNagative">版权声明</a><br>
 										2014 中共上海华虹（集团）有限公司委员会主办 版权所有
 										<br>
 										最佳浏览 1024x768 分辨率
