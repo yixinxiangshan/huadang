@@ -13,9 +13,12 @@
 				if rs.eof and InStr(request.servervariables("http_referer"), "choujiang.asp") > 0 then
 					rs.addnew
 					rs("lucky_names") = Deal(request.form("lucky_names"))
-					rs.update					
+					rs.update	
+					lucky_names = rs("lucky_names")				
+				else if not rs.eof then
+					lucky_names = rs("lucky_names")
+					end if
 				end if
-				lucky_names = rs("lucky_names")
 			%>
 	</head>
 	<body>
